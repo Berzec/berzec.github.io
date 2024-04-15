@@ -4,12 +4,17 @@
   src: url("gg-sans-fonts/gg-sans-medium.woff");
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  display: relative;
   background-color: rgb(26,26,26);
   font-family: gg-sans;
   text-align: center;
+  z-index: 5;
 }
-
 
 p {
   color: rgb(224, 224, 224);
@@ -22,13 +27,11 @@ p {
   margin-bottom: 40px;
 }
 
-
 h1 {
   color: rgb(224, 224, 224);
   font-size: 50px;
-  text-decoration: underline 5px rgb(30, 50, 80);
+  text-decoration: underline 5px rgb(70, 90, 150);
 }
-
 
 h4 {
   font-size: 35px;
@@ -36,20 +39,15 @@ h4 {
   text-decoration: underline 1px rgb(100, 100, 150);
 }
 
-
 h6 {
   font-size: 11px;
   color: rgb(5, 5, 40);
   font-weight: normal;
 }
 
-
 img {
-  object-fit: cover;
-  border: 1px solid rgb(150, 150, 150);
-  border-radius: 4px;
+  border-radius: 15px;
 }
-
 
 li {
   text-align: left;
@@ -57,12 +55,10 @@ li {
   color: rgb(30, 30, 60);
 }
 
-
 a {
   font-size: 15px;
   color: rgb(70, 0, 200);
 }
-
 
 hr {
   height: 3px;
@@ -112,35 +108,56 @@ hr {
   margin-bottom: 30px;
 }
 
-#frontFlag {
-  width: 40%;
-  max-width: 400px;
-  border: none;
-  outline: 3px solid rgb(125, 125, 125); 
-  outline-offset: 2px;
-}
 
 /* other random things */
 
-div.polaroid {
-  width: 40%;
+.card {
+  display: flex;
+  width: 80%;
   background-color: white;
-  box-shadow: 0 1px 2px 0 rgba(40, 40, 40, 50), 0 2px 5px 0 rgba(40, 40, 40, 50);
-  margin-bottom: 10px;
   margin-right: auto;
   margin-left: auto;
-  border-radius: 5px;
+  border-radius: 15px;
+  z-index: 5;
+
+  img {
+    display: relative;
+    width: 60%;
+    height: 50%;
+    float: left;
+    margin-top: 15px;
+    margin-bottom: 15px; 
+    margin-left: 15px;
+    border-radius: 15px;
+  }
 }
 
-div.container {
+.card-p {
+  width: 120%;
+  display: flex;
   text-align: center;
-  padding: 10px 15px 10px 15px;
+  align-items: center;
+  margin-bottom: 3%;
+
+  p{
+    color: rgb(56, 56, 56);
+  }
 }
+
+.shadow {
+  filter: blur(10px);/* this is the magic part */
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+}
+
 
 
 /* nav bar*/
 
 .nav {
+  display: relative;
   position: fixed;
   top: 0;
   left: 0px;
@@ -151,9 +168,11 @@ div.container {
   overflow: hidden;
   background-color: rgb(40, 40, 45);
   border-bottom: 3px solid rgb(65, 65, 80);
+  height: 65px;
+  z-index: 5;
 }
 
-.li-a{
+.inactive{
   float: right;
   display: block;
   color: rgb(230, 230, 230);
