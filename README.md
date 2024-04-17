@@ -1,3 +1,4 @@
-A place where i dump every single project
+this website is actually coming together somehow
 
-i suck at coding plz dont judge :p
+
+dont judge it
