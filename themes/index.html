@@ -2,38 +2,61 @@
 <html lang="en">
   <head>
 
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
-    <style src="javascript.js"></style>
+    <style src="../js/javascript.js"></style>
     <title>Themes</title>
 
-    <ul class="nav">
-      <li><a href="index.html"><img src="eu-flag.png" alt="EU Flag" class="reform-img"></a></li>
-      <li><a href="../about.html" class="inactive">About</a></li>
-      <li><a href="index.html" class="active">Themes</a></li>
-      <li><a href="../index.html" class="inactive">Home</a></li>
-    </ul>
+    <nav class="nav">
+      <ul class="nav">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="index.html" class="active">Themes</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
     
     <br><br><br>
       
   </head>
-  <body class="center">
+  <body>
     
-    <h1>Themes</h1>
-    
-    <p>Discover and download every theme I make here</p>
-    
-    <a href="redesign-discord.html" class="div-link">
-    <div class="card">
-      <img class="shadow" src="../images/ChessSet.jpg" alt="chess">
-      <img class="normal" src="../images/ChessSet.jpg" alt="chess">
-      <div class="card-p">
-        <h1>Redesign Discord</h1>
-      </div>
+    <div class="urgent-update" id="update">
+      <h2>This Website has not been adapted for smaller screens</h2>
     </div>
-    </a>
-    
-    <br>  
-    
+
+    <main class="center">
+      <h1>Themes</h1>
+      <br>
+      
+      <p>The Greats of Themes</p>
+      
+      <a href="redesign-discord.html">
+        <div class="card-horizontal">
+          <img class="shadow-left" src="../images/redesign-discord.png" alt="chess">
+          <img class="normal-left" src="../images/redesign-discord.png" alt="chess">
+          <div class="card-p">
+            <h1>Redesign Discord</h1>
+          </div>
+        </div>
+      </a>
+
+      <a href="theme-tutorial.html">
+        <div class="card-horizontal">
+          <div class="card-p">
+            <h1>Theme Making Tutorial</h1>
+          </div>
+          <img class="shadow-right" src="../images/monterey.png" alt="Monterey">
+          <img class="normal-right" src="../images/monterey.png" alt="Monterey">
+        </div>
+      </a>
+      
+      <br>  
+
+    </main>
+  
+    <footer id="footer">
+      <p class="footer-column"></p>
+    </footer>
+
   </body>
 </html>
