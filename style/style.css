@@ -1,0 +1,403 @@
+/* filling this void with comment */
+
+
+/* universal variables */
+:root {
+
+  /* roundness */
+
+  --radius: 15px;
+
+  --radius-small: 7px;
+
+  --radius-circle: 1000px;
+
+  /* spacing and sizing */
+
+  --spacing: 10px;
+  --spacing-small: 5px;
+  --spacing-large: 15px;
+
+  --card-height: 70px;
+
+  /* opacity and filters */
+
+  --hover-opacity: 0.7;
+
+  --blur: 15px;
+  --blur-light: 7px;
+
+  /* clear */
+  --clear: rgba(0, 0, 0, 0);
+
+}
+
+:root /* dark theme root */ {
+
+  --blue-original: rgba(100, 150, 250, 1);
+  
+  /* colors */
+
+  --text-body: rgba(225, 225, 225, 1);
+
+  --text-card: rgba(40, 40, 40, 1);
+
+  --text-link: rgba(90, 130, 220, 0.9);
+
+  --text-button: rgba(200, 200, 215, 1); 
+
+  /* background colors */
+
+  --bg-main: rgba(26, 26, 26, 1);
+  --bg-main-clear: rgba(26, 26, 26, 0.5);
+
+  --bg-card: rgba(230, 233, 235, 1);
+  
+  --bg-nav: rgba(70, 70, 70, 0.9);
+  --bg-nav-hover: rgba(150, 150, 150, 0.6);
+  --bg-nav-selected: rgba(120, 120, 120, 0.5);
+  --bg-nav-mobile: rgba(50, 50, 50, 0.8);
+
+  --bg-button: rgba(100, 100, 100, 1);
+
+  --bg-button-hover: rgba(140, 140, 140, 0.9);
+
+  --bg-setting-card: rgba(60, 60, 60, 1);
+
+  /* button colors */
+
+  --button-close: rgba(230, 70, 70, 1);
+  --button-close-hover: rgba(250, 60, 60, 1);
+
+}
+
+.theme-light {
+
+  /* colors */
+
+  --text-body: rgba(40, 40, 40, 1);
+
+  --text-card: rgba(235, 235, 235, 1); 
+
+  --text-link: rgba(120, 180, 240, 0.9);
+
+  --text-button: rgba(40, 40, 45, 1); 
+
+  /* background colors */
+
+  --bg-main: rgba(240, 240, 240, 1);
+  --bg-main-clear: rgba(240, 240, 240, 0.3);
+
+  --bg-card: rgba(150, 153, 155, 1);
+
+  --bg-nav: rgba(170, 170, 170, 0.9);
+  --bg-nav-hover: rgba(120, 120, 120, 0.6);
+  --bg-nav-selected: rgba(150, 150, 150, 0.5);
+  --bg-nav-mobile: rgba(220, 220, 220, 0.8);
+
+  --bg-button: rgba(160, 160, 160, 1);
+
+  --bg-button-hover: rgba(110, 110, 110, 0.8);
+
+  --bg-setting-card: rgba(220, 220, 220, 1);
+
+  /* button colors */
+
+  --button-close: rgb(230, 70, 70, 1);
+  --button-close-hover: rgba(250, 60, 60, 1);
+}
+
+body {
+  background-color: var(--bg-main);
+  font-family: arial;
+  transition: 0.2s;
+  margin: 0 !important;
+  z-index: 1;
+}
+nav {
+  position: relative;
+  z-index: 10000;
+}
+
+/* navigation bar */
+
+.nav {
+  height: 70px;
+  display: flex;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  overflow: auto;
+  background-color: var(--bg-main-clear);
+  backdrop-filter: blur(var(--blur-light));
+  background-image: linear-gradient(var(--bg-main), var(--clear));
+}
+
+.center-nav {
+  border-radius: var(--radius-circle);
+  background-color: var(--bg-nav);
+  position: relative;
+  display: inline;
+  width: auto;
+  text-align: center;
+  margin: auto;
+  padding: var(--spacing-small);
+  opacity: 0.9; 
+}
+.center-nav-mobile {
+  display: none;
+}
+
+.nav-link {
+  position: relative;
+  display: flex;
+  text-align: center;
+  padding: 5px 10px 5px 10px;
+  margin: auto 1px auto 1px;
+  float: left;
+  width: max-content;
+  right: 0;
+  text-align: center;
+  color: var(--text-body);
+  text-decoration: none;
+  transition: 0.4s;
+}
+.nav-link-selected {
+  background-color: var(--bg-nav-selected);
+  border-radius: var(--radius);
+}
+
+.nav-link:hover {
+  background-color: var(--bg-nav-hover);
+  border-radius: var(--radius-circle);
+  padding: 5px 17px 5px 17px;
+  text-align: center;
+}
+
+.home-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: var(--spacing-large) 0 0 var(--spacing-large);
+  overflow: hidden;
+  display: flex;
+  float: left;
+  position: absolute;
+}
+
+/* BUTTONS */
+/* circular */
+.button-circular {
+  display: block;
+  right: 0;
+  float: right;
+  height: 40px;
+  width: 40px;
+  border: none;
+  border-radius: var(--radius-circle);
+  background-color: var(--bg-button);
+  color: var(--text-button);
+}
+.button-circular:hover {
+  background-color: var(--bg-button-hover);
+  border-radius: var(--radius-circle);
+}
+
+/* setting actions */
+/* open setting button */
+.setting-toggler {
+  display: block;
+  position: absolute;
+  right: 0;
+  float: right;
+  margin: var(--spacing-large) var(--spacing-large) 0 0;
+  height: 40px;
+  width: 40px;
+  background-color: var(--bg-nav);
+  color: var(--text-button);
+  border: none;
+  border-radius: var(--radius-circle);
+  z-index: 1000000;
+}
+.setting-toggler:hover {
+  background-color: var(--bg-button-hover);
+}
+/* setting card js-linked */
+#setting-card {
+  display: none;
+  position: fixed;
+  right: var(--spacing);
+  float: right;
+  top: calc(var(--spacing) + 70px);
+  color: var(--text-card);
+  background-color: var(--bg-setting-card);
+  border-radius: var(--radius);
+  padding: var(--spacing);
+}
+
+/* three bar menu icon */
+#menu-icon {
+  width: 20px;
+  height: 20px;
+  margin: auto;
+  display: block;
+}
+
+/* content cards */
+
+#filler-card {
+  display: flex;
+  position: relative;
+  height: var(--card-height);
+  opacity: 0;
+  z-index: 50;
+}
+#first-card {
+  position: relative;
+  display: flex;
+  background-color: var(--bg-card);
+  margin: 0 auto var(--spacing) auto;
+  color: var(--text-card);
+  z-index: 3;
+  overflow: auto;
+}
+#first-card img {
+  width: 100%;
+}
+
+.single-wide-card {
+  position: relative;
+  display: flex;
+  width: 80%;
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
+  margin: 0 auto var(--spacing) auto;
+  z-index: 3;
+  overflow: auto;
+}
+.single-wide-card img {
+  width: 100%;
+}
+
+.duo-wide-card {
+
+}
+.duo-single-card {
+
+}
+
+/* MEDIA QUERIES */
+/* yes i use desktop first design dont question */
+
+/* media query for mobile (condensing stuff) */
+@media screen and (max-width: 600px) {
+  /* GENERAL CLASSES */
+
+
+
+  /* actual nav bar, pill shape */
+  .center-nav {
+    display: none;
+  }
+
+  /* logo that returns home */
+  .home-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    position: absolute;
+  }
+  #setting-card {
+    background-color: var(--clear);    
+  }
+
+  /* MOBILE SPECIFIC CLASS */
+
+  .center-nav-mobile {
+    display: block;
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    background-color: var(--bg-nav-mobile);
+    backdrop-filter: blur(var(--blur));
+    transition: 1s;
+  }
+  
+  .nav-link-mobile {
+    position: relative;
+    display: grid;
+    text-align: center;
+    padding: 15px 10px 15px 10px;
+    margin: 3px auto 3px auto !important;
+    width: 50%;
+    font-size: 1.5em;
+    text-align: center;
+    color: var(--text-body);
+    text-decoration: none;
+    transition: 0.3s;
+  }  
+  .nav-link-mobile:hover {
+    background-color: var(--bg-button-hover);
+    border-radius: var(--radius-circle);
+  }
+  .setting-button-mobile {
+    position: relative;
+    left: 0;
+    float: left;
+    margin-top: var(--spacing-small);
+    margin-right: var(--spacing-small);
+    background-color: var(--bg-nav);
+    color: var(--text-button);
+    border: none;
+    border-radius: var(--radius-circle);
+  }
+  .global-setting-bar-toggle-mobile {
+    display: block;
+    position: fixed;
+    width: 100%;
+    padding-bottom: var(--spacing-large);
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    transition: 1s;
+  }  
+  #theme-toggle-mobile-id {
+    display: block;
+    margin-top: var(--spacing-large);
+    margin-left: var(--spacing-large);
+    background-color: var(--bg-button);
+  }
+  #theme-toggle-mobile-id:hover {
+    background-color: var(--bg-button-hover);
+  }
+  #theme-toggle-desktop-id {
+    display: none;
+  }
+  #nav-link-mobile-filler {
+    position: relative;
+    display: grid;
+    text-align: center;
+    padding: 15px 10px 15px 10px;
+    margin: 3px auto 3px auto !important;
+    width: 50%;
+    height: 5%;
+    font-size: 1.5em;
+    text-align: center;
+  }
+  .menu-close-mobile-id {
+    background-color: var(--button-close);
+    margin-top: var(--spacing-large);    
+    margin-right: var(--spacing-large);
+  }
+  .menu-close-mobile-id:hover {
+    background-color: var(--button-close-hover);
+    opacity: var(--hover-opacity);
+  }
+}

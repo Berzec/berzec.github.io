@@ -2,79 +2,78 @@
 <html lang="en">
   <head>
 
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <style src="js/javascript.js"></style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Berzec">
+    <meta name="description" content="The works of all things made by Berzec">
+    <meta name="keywords" content="Discord, CSS, Berzec">
+
+    <link rel="stylesheet" href="style/style.css">
+    <script language="javascript" type="text/javascript" src="script/javascript.js" defer></script>
+
+    <link rel="icon" href="favicon.svg">
     <title>About</title>
 
-    <nav class="nav">
-      <ul class="nav">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="themes/index.html">Themes</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-      </ul>
-    </nav>
-    
-    <br><br><br>
-      
   </head>
-  <body>
 
-    <div class="urgent-update" id="update">
-      <h1>Alert</h1>
-      <h2>This Website has not been adapted for smaller screens</h2>
-      <h2>Errors and Glitches may appear</h2>
-      <h2>sorry :p</h2>
-    </div>
 
-    <main class="center">
-      <h1>About</h1>
-      <br>
-    
-      <p>Quirks and features of this place</p>
-    
-      <br>
-    
-      <p>text to explain stuff probably</p>
+  <body id="theme-toggle">
 
-      <div class="card-compact-houser">
+    <nav> 
+      <div class="nav">
+        <a href="index.html">
+          <img class="home-icon" src="favicon.png" alt="paper airlines logo">
+        </a>
 
-        <div class="card-houser-heading">
-          <h1>Socials and Contacts</h1>
-          <p>something</p>
+        <!-- center pill nav bar -->
+        <div class="center-nav">
+          <a class="nav-link" href="themes/index.html">Themes</a>
+          <a class="nav-link" href="concepts/index.html">Concepts</a>
+          <a class="nav-link" href="paper/index.html">Paper</a>
+          <a class="nav-link nav-link-selected" href="#">About</a>
         </div>
+        
+        <button class="setting-toggler" onclick="settingToggle()"><img id="menu-icon" src="icons/menu-icon.svg" alt="settings menu"></button>
+      </div>
+    
 
-        <div class="card-row row-top">
-          <a href="https://discord.gg/8mdGd9pNJb" class="card-compact-link" target="_blank">
-            <div class="card-p-compact"><h1>Discord</h1></div>
-          </a>
-          <a href="https://github.com/Berzec" class="card-compact-link" target="_blank">
-            <div class="card-p-compact"><h1>GitHub</h1></div>
-          </a>
-          <a href="https://twitter.com/berzec13" class="card-compact-link" target="_blank">
-            <div class="card-p-compact"><h1>Twitter</h1></div>
-          </a>
-        </div>
+      <!-- mobile nav and some other -->
+      <div id="setting-card">
+        
+        <!-- theme toggler for desktop -->
+        <button class="button-circular" id="theme-toggle-desktop-id" onclick="themeToggle()">to</button>
+        
+        <!-- navigation for mobile -->
+        <div class="center-nav-mobile" id="center-nav-mobile-id">
+          
+          <!-- website controls and buttons -->
+          <div class="global-setting-bar-toggle-mobile">
 
-        <div class="card-row">
-          <a href="https://berzec.github.io/404.html" class="card-compact-link" target="_blank">
-            <div class="card-p-compact"><h1>Donations</h1></div>
-          </a>
-          <a href="https://www.youtube.com/@berzec" class="card-compact-link" target="_blank">
-            <div class="card-p-compact"><h1>YouTube</h1></div>
-          </a>
-          <a href="https://www.reddit.com/user/Berzec13/" class="card-compact-link" target="_blank">
-            <div class="card-p-compact"><h1>Reddit</h1></div>
-          </a>
+            <button class="setting-toggler menu-close-mobile-id" onclick="settingToggle()"><img id="menu-icon" src="icons/close-icon.svg" alt="close button"></button>
+
+            <button class="button-circular setting-button-mobile" id="theme-toggle-mobile-id" onclick="themeToggle()">to</button>
+            
+          </div>
+
+
+          <p id="nav-link-mobile-filler"></p>
+          <a class="nav-link-mobile" href="themes/index.html">Themes</a>
+          <a class="nav-link-mobile" href="concepts/index.html">Concepts</a>
+          <a class="nav-link-mobile" href="paper/index.html">Paper</a>
+          <a class="nav-link-mobile" href="#">About</a>
+  
         </div>
+      </div>
+    </nav>
+
+    <main>
+
+      <div id="filler-card"></div>
+
+      <div id="first-card" style="text-align: center; display: block;">
+        <h1>to be built</h1>
       </div>
 
     </main>
-    
-    <footer id="footer">
-      <p class="footer-column"></p>
-    </footer>
- 
-
   </body>
 </html>

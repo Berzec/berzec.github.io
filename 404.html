@@ -2,64 +2,78 @@
 <html lang="en">
   <head>
 
-    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <style src="js/javascript.js"></style>
-    <title>Page Not Found</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Berzec">
+    <meta name="description" content="The works of all things made by Berzec">
+    <meta name="keywords" content="Discord, CSS, Berzec">
 
-    <nav class="nav">
-      <ul class="nav">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="themes/index.html">Themes</a></li>
-        <li><a href="about.html">About</a></li>
-      </ul>
-    </nav>
-    
-    <br><br><br>
-      
+    <link rel="stylesheet" href="style/style.css">
+    <script language="javascript" type="text/javascript" src="script/javascript.js" defer></script>
+
+    <link rel="icon" href="favicon.svg">
+    <title>404 Error</title>
+
   </head>
-  <body>
 
-    <div class="urgent-update" id="update">
-      <h1>Alert</h1>
-      <h2>This Website has not been adapted for smaller screens</h2>
-      <h2>Errors and Glitches may appear</h2>
-      <h2>sorry :p</h2>
-    </div>
 
-    <main class="center">
-      <h1>404 Not Found</h1>
-      <br>
-    
-      <p>The page you are trying to access couldn't be found</p>
+  <body id="theme-toggle">
 
-      <div class="card-compact-houser">
+    <nav> 
+      <div class="nav">
+        <a href="index.html">
+          <img class="home-icon" src="favicon.png" alt="paper airlines logo">
+        </a>
 
-        <div class="card-houser-heading">
-          <h1>Return to a Page</h1>
-          <p>something</p>
+        <!-- center pill nav bar -->
+        <div class="center-nav">
+          <a class="nav-link" href="themes/index.html">Themes</a>
+          <a class="nav-link" href="concepts/index.html">Concepts</a>
+          <a class="nav-link" href="paper/index.html">Paper</a>
+          <a class="nav-link" href="about.html">About</a>
         </div>
+        
+        <button class="setting-toggler" onclick="settingToggle()"><img id="menu-icon" src="icons/menu-icon.svg" alt="settings menu"></button>
+      </div>
+    
 
-        <div class="card-row row-top">
-          <a href="index.html" class="card-compact-link">
-            <div class="card-p-compact"><h1>Home</h1></div>
-          </a>
-          <a href="themes/index.html" class="card-compact-link">
-            <div class="card-p-compact"><h1>Theme</h1></div>
-          </a>
-          <a href="about.html" class="card-compact-link">
-            <div class="card-p-compact"><h1>About</h1></div>
-          </a>
+      <!-- mobile nav and some other -->
+      <div id="setting-card">
+        
+        <!-- theme toggler for desktop -->
+        <button class="button-circular" id="theme-toggle-desktop-id" onclick="themeToggle()">to</button>
+        
+        <!-- navigation for mobile -->
+        <div class="center-nav-mobile" id="center-nav-mobile-id">
+          
+          <!-- website controls and buttons -->
+          <div class="global-setting-bar-toggle-mobile">
+
+            <button class="setting-toggler menu-close-mobile-id" onclick="settingToggle()"><img id="menu-icon" src="icons/close-icon.svg" alt="close button"></button>
+
+            <button class="button-circular setting-button-mobile" id="theme-toggle-mobile-id" onclick="themeToggle()">to</button>
+            
+          </div>
+
+
+          <p id="nav-link-mobile-filler"></p>
+          <a class="nav-link-mobile" href="themes/index.html">Themes</a>
+          <a class="nav-link-mobile" href="concepts/index.html">Concepts</a>
+          <a class="nav-link-mobile" href="paper/index.html">Paper</a>
+          <a class="nav-link-mobile" href="about.html">About</a>
+  
         </div>
       </div>
+    </nav>
 
+    <main>
+
+      <div id="filler-card"></div>
+
+      <div id="first-card" style="text-align: center; display: block;">
+        <h1>404 Error</h1>
+      </div>
 
     </main>
-
-
-    <footer id="footer">
-      <p class="footer-column"></p>
-    </footer>
-
   </body>
 </html>
