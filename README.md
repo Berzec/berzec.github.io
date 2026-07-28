@@ -1,14 +1,3 @@
-### A website
+### MSMS SGA Website
 
-guys what do i do here help me
-
-
-## change log 
-
-vertical cards in the making 
-
-code cleanup 
-
-probably forgot stuff
-
-need to replace some stuff 
+The official website for the MSMS Student Government Association

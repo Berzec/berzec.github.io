@@ -1,6 +1,8 @@
 /* filling this void with comment */
 
 
+/* A BIG NOTE: DESIGN PHILOSPHY IS INSPIRED BY GOOGLE, REDBULL, AND MATERIAL THREE EXPRESSIVE */
+
 /* universal variables */
 :root {
 
@@ -58,6 +60,8 @@
   --bg-nav-selected: rgba(120, 120, 120, 0.5);
   --bg-nav-mobile: rgba(50, 50, 50, 0.8);
 
+  --bg-footer: rgba(15,15,15,1);
+
   --bg-button: rgba(100, 100, 100, 1);
 
   --bg-button-hover: rgba(140, 140, 140, 0.9);
@@ -71,48 +75,24 @@
 
 }
 
-.theme-light {
-
-  /* colors */
-
-  --text-body: rgba(40, 40, 40, 1);
-
-  --text-card: rgba(235, 235, 235, 1); 
-
-  --text-link: rgba(120, 180, 240, 0.9);
-
-  --text-button: rgba(40, 40, 45, 1); 
-
-  /* background colors */
-
-  --bg-main: rgba(240, 240, 240, 1);
-  --bg-main-clear: rgba(240, 240, 240, 0.3);
-
-  --bg-card: rgba(150, 153, 155, 1);
-
-  --bg-nav: rgba(170, 170, 170, 0.9);
-  --bg-nav-hover: rgba(120, 120, 120, 0.6);
-  --bg-nav-selected: rgba(150, 150, 150, 0.5);
-  --bg-nav-mobile: rgba(220, 220, 220, 0.8);
-
-  --bg-button: rgba(160, 160, 160, 1);
-
-  --bg-button-hover: rgba(110, 110, 110, 0.8);
-
-  --bg-setting-card: rgba(220, 220, 220, 1);
-
-  /* button colors */
-
-  --button-close: rgb(230, 70, 70, 1);
-  --button-close-hover: rgba(250, 60, 60, 1);
+/* font */
+@font-face {
+  font-family: 'rhd';
+  src: url("Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 body {
   background-color: var(--bg-main);
-  font-family: arial;
+  font-family: 'rhd', sans-serif;
   transition: 0.2s;
   margin: 0 !important;
   z-index: 1;
+}
+main {
+  min-height: calc(100dvh - 225px);
 }
 nav {
   position: relative;
@@ -150,6 +130,7 @@ nav {
   display: none;
 }
 
+/* navigation links */
 .nav-link {
   position: relative;
   display: flex;
@@ -168,7 +149,6 @@ nav {
   background-color: var(--bg-nav-selected);
   border-radius: var(--radius);
 }
-
 .nav-link:hover {
   background-color: var(--bg-nav-hover);
   border-radius: var(--radius-circle);
@@ -176,6 +156,7 @@ nav {
   text-align: center;
 }
 
+/* nav icon link, with favicon */
 .home-icon {
   width: 40px;
   height: 40px;
@@ -186,6 +167,44 @@ nav {
   float: left;
   position: absolute;
 }
+
+/* footer */
+#footer-id {
+  background-color: var(--bg-footer);
+  height: 225px;
+  padding: 0 10% 0 10%;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.footer-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  text-align: center;
+  padding: var(--spacing-large);
+  margin: auto;
+  float: left;
+  text-align: center;
+  color: var(--text-body);
+  text-decoration: none;
+}
+.footer-card h1 {
+  font-size: 1.5em;
+}
+.footer-card p {
+  font-size: 1em;
+  margin: unset;
+  padding: unset;
+}
+.footer-card img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  max-height: 150px;
+}
+
 
 /* BUTTONS */
 /* circular */
@@ -208,7 +227,7 @@ nav {
 /* setting actions */
 /* open setting button */
 .setting-toggler {
-  display: block;
+  display: none;
   position: absolute;
   right: 0;
   float: right;
@@ -247,6 +266,7 @@ nav {
 
 /* content cards */
 
+/* a card to fill a space (cover up my bad coding) */
 #filler-card {
   display: flex;
   position: relative;
@@ -254,6 +274,7 @@ nav {
   opacity: 0;
   z-index: 50;
 }
+/* the first, first card (top of the page, under nav) */
 #first-card {
   position: relative;
   display: flex;
@@ -263,10 +284,21 @@ nav {
   z-index: 3;
   overflow: auto;
 }
+/* first card, but image. if image, it should only be one image, and only the image. no words */
 #first-card img {
   width: 100%;
 }
+#first-card h1 {
+  font-size: 3em;
+  padding: 0 var(--spacing) 0 var(--spacing);
+}
+#first-card p {
+  font-size: 1.2em;
+  padding: 0 var(--spacing) 0 var(--spacing);
+}
 
+
+/* single cards that lie under the first card. reference store.google.com */
 .single-wide-card {
   position: relative;
   display: flex;
@@ -280,16 +312,99 @@ nav {
 .single-wide-card img {
   width: 100%;
 }
+.single-wide-card-title {
+  padding: var(--spacing);
+}
+.single-wide-card-download {
+  margin: var(--spacing);
+  height: 40px;
+}
 
-.duo-wide-card {
-
+/* double cards, container is the area that contains both cards */
+.duo-container-card {
+  position: relative;
+  display: flex;
+  z-index: 3;
+  margin: var(--spacing) var(--spacing) var(--spacing) var(--spacing);
 }
 .duo-single-card {
-
+  position: relative;
+  display: flex;
+  width: 40%;
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
+  z-index: 10;
+  overflow: auto;
+  padding: var(--spacing);
+  margin: var(--spacing) auto var(--spacing) auto;
 }
+.duo-single-card-title {
+  font-size: 1.6em;
+  padding: var(--spacing);
+}
+.duo-single-card-download {
+  margin: auto;
+  margin-right: var(--spacing-small) !important;
+  padding: var(--spacing-small);
+  float: right !important;
+}
+.duo-single-card-download img {
+  height: 40px;
+  margin-right: auto !important;
+  float: right !important;
+}
+
+/* super grid, a giant list of grids */
+.supergrid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: var(--spacing);
+  padding: var(--spacing);
+}
+.supergrid-card {
+  display: flex;
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
+  margin: var(--spacing);
+}
+.supergrid-card-title {
+  font-size: 1.6em;
+  padding: var(--spacing);
+}
+.supergrid-card-download {
+  margin: auto;
+  margin-right: var(--spacing-small) !important;
+  padding: var(--spacing-small);
+  float: right !important;
+}
+.supergrid-card-download img {
+  height: 40px; 
+  margin-right: auto !important;
+  float: right !important;
+}
+
+
 
 /* MEDIA QUERIES */
 /* yes i use desktop first design dont question */
+
+/* footer has an issue where at 850px the content gets jumbled up */
+@media screen and (max-width: 850px) {
+  #footer-id {
+    padding: unset;
+    padding-bottom: 50px !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 550px;
+  }
+  .footer-card {
+    width: max-content;
+  }
+  .footer-card img {
+    padding-top: 25px;
+  }
+}
 
 /* media query for mobile (condensing stuff) */
 @media screen and (max-width: 600px) {
@@ -347,6 +462,11 @@ nav {
     background-color: var(--bg-button-hover);
     border-radius: var(--radius-circle);
   }
+
+  .setting-toggler {
+  display: block;
+  }
+
   .setting-button-mobile {
     position: relative;
     left: 0;
@@ -400,4 +520,23 @@ nav {
     background-color: var(--button-close-hover);
     opacity: var(--hover-opacity);
   }
+
+  #footer-id {
+    padding: unset;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-card {
+    width: max-content;
+  }
+
+  /* cards and stuff */
+  .duo-container-card {
+    flex-direction: column;
+  }
+  .duo-single-card {
+    width: unset;
+  }
+
 }
