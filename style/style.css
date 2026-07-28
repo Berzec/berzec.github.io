@@ -87,7 +87,6 @@
 body {
   background-color: var(--bg-main);
   font-family: 'rhd', sans-serif;
-  transition: 0.2s;
   margin: 0 !important;
   z-index: 1;
 }
