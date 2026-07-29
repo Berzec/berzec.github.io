@@ -8,9 +8,9 @@
 
   /* roundness */
 
-  --radius: 15px;
+  --radius: 25px;
 
-  --radius-small: 7px;
+  --radius-small: 15px;
 
   --radius-circle: 1000px;
 
@@ -273,12 +273,12 @@ nav {
   opacity: 0;
   z-index: 50;
 }
-/* the first, first card (top of the page, under nav) */
+/* the first, first card (top of the page, under nav, big banner) */
 #first-card {
   position: relative;
   display: flex;
   background-color: var(--bg-card);
-  margin: 0 auto var(--spacing) auto;
+  margin: 0 auto var(--spacing-large) auto;
   color: var(--text-card);
   z-index: 3;
   overflow: auto;
@@ -298,6 +298,11 @@ nav {
 
 
 /* single cards that lie under the first card. reference store.google.com */
+.single-wide-card-link{
+  border-radius: var(--radius);
+  text-decoration: none;
+  width: 100%;
+}
 .single-wide-card {
   position: relative;
   display: flex;
@@ -307,6 +312,13 @@ nav {
   margin: 0 auto var(--spacing) auto;
   z-index: 3;
   overflow: auto;
+}
+.single-wide-card h1 {
+  font-size: 2em;
+  color: var(--text-card);
+  text-align: center;
+  margin: auto;
+  padding: var(--spacing);
 }
 .single-wide-card img {
   width: 100%;
@@ -356,7 +368,7 @@ nav {
 /* super grid, a giant list of grids */
 .supergrid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
   gap: var(--spacing);
   padding: var(--spacing);
 }
@@ -370,6 +382,18 @@ nav {
   font-size: 1.6em;
   padding: var(--spacing);
 }
+.supergrid-card-title h1 {
+  font-size: 1em;
+  margin: auto;
+  padding: unset;
+  padding-top: var(--spacing);
+}
+.supergrid-card-title p {
+  font-size: 0.65em !important;
+  margin: auto;
+  padding: unset;
+  padding-bottom: var(--spacing);
+}
 .supergrid-card-download {
   margin: auto;
   margin-right: var(--spacing-small) !important;
@@ -381,7 +405,21 @@ nav {
   margin-right: auto !important;
   float: right !important;
 }
-
+.supergrid-card-img {
+  margin: auto;
+  margin-right: unset !important;
+  padding: var(--spacing-small);
+  float: right !important;
+  height: 150px;
+}
+.supergrid-card-img img {
+  height: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  margin-right: auto !important;
+  float: right !important;
+  border-radius: var(--radius);
+}
 
 
 /* MEDIA QUERIES */
@@ -406,7 +444,7 @@ nav {
 }
 
 /* media query for mobile (condensing stuff) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   /* GENERAL CLASSES */
 
 
