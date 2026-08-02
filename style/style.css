@@ -18,9 +18,8 @@ body {
   /* roundness */
 
   --radius: 25px;
-
   --radius-small: 15px;
-
+  --radius-large: 50px;
   --radius-circle: 1000px;
 
   /* spacing and sizing */
@@ -63,6 +62,7 @@ body {
   --bg-main-clear: rgba(26, 26, 26, 0.5);
 
   --bg-card: rgba(230, 233, 235, 1);
+  --bg-card-hover: rgba(160, 163, 165, 1);
   
   --bg-nav: rgba(70, 70, 70, 0.9);
   --bg-nav-hover: rgba(150, 150, 150, 0.6);
@@ -81,6 +81,15 @@ body {
 
   --button-close: rgba(230, 70, 70, 1);
   --button-close-hover: rgba(250, 60, 60, 1);
+
+  --slideshow-dot: rgba(50, 50, 50, 1);
+  --slideshow-dot-hover: rgba(170, 173, 175, 0.75);
+  --slideshow-dot-selected: rgba(230, 233, 235, 1);
+
+  /* other colors */
+
+  --warning: rgba(240, 50, 50, 1);
+  --notice: rgba(80, 110, 220, 1);
 
 }
 
@@ -280,7 +289,7 @@ nav {
   position: relative;
   display: flex;
   background-color: var(--bg-card);
-  margin: 0 auto var(--spacing-large) auto;
+  margin: 0 auto 30px auto;
   color: var(--text-card);
   z-index: 3;
   overflow: auto;
@@ -298,25 +307,116 @@ nav {
   padding: 0 var(--spacing) 0 var(--spacing);
 }
 
+/* slideshow */
+.first-card-slideshow-container {
+  position: relative;
+  margin: auto;
+  width: 95%;
+}
+.slideshow-images {
+  margin: auto;
+  align-items: center;
+  display: none;
+  height: 40dvw;
+}
+.slideshow-images img {
+  height: inherit;
+  width: 100%;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+.slideshow-forward, .slideshow-backward {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  margin-right: var(--spacing-small);
+  margin-left: var(--spacing-small);
+  border-radius: var(--radius-circle);
+  padding: var(--spacing-large);
+  color: var(--text-body);
+  background-color: var(--bg-nav-mobile);
+  opacity: 1;
+  font-weight: bold;
+  font-size: 1.5em;
+  transition: 0.3s ease;
+  user-select: none;
+}
+.slideshow-forward {
+  right: 0;
+}
+.slideshow-backward:hover, .slideshow-forward:hover {
+  background-color: var(--bg-button);
+}
+.slideshow-caption-text {
+  color: var(--text-body);
+  font-size: 1em;
+  width: 100%;
+  text-align: center;
+  background-color: var(--bg-main);
+  margin: auto;
+}
+.slideshow-dot-container {
+  display: grid;
+  width: 75%;
+  grid-template-columns: repeat(auto-fit, minmax(min(20px, 100%), 1fr));
+  gap: var(--spacing);
+  padding: var(--spacing);  
+  margin: auto;
+}
+.slideshow-dot {
+  display: flex;
+  cursor: pointer;
+  height: 15px;
+  background-color: var(--slideshow-dot);
+  border-radius: var(--radius-circle);
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+.slideshow-dot:hover {
+  background-color: var(--slideshow-dot-hover);
+}
+.slideshow-dot-active {
+  background-color: var(--slideshow-dot-selected);
+}
+.slideshow-fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+@keyframes slideshow-fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
 
 /* single cards that lie under the first card. reference store.google.com */
 .single-wide-card-link{
   border-radius: var(--radius);
   text-decoration: none;
   width: 100%;
+  transition: 0.2s;
+}
+.single-wide-card-link:hover{
+  background-color: var(--bg-card-hover);
 }
 .single-wide-card {
-  position: relative;
   display: flex;
+  flex-direction: column;
   width: 80%;
   background-color: var(--bg-card);
   border-radius: var(--radius);
-  margin: 0 auto var(--spacing) auto;
-  z-index: 3;
-  overflow: auto;
+  margin: var(--spacing) auto var(--spacing) auto;
 }
 .single-wide-card h1 {
-  font-size: 2em;
+  font-size: 2.5em;
+  color: var(--text-card);
+  text-align: center;
+  margin: auto;
+  padding: var(--spacing);
+}
+.single-wide-card p {
+  font-size: 1.25em;
   color: var(--text-card);
   text-align: center;
   margin: auto;
@@ -324,6 +424,7 @@ nav {
 }
 .single-wide-card img {
   width: 100%;
+  border-radius: inherit;
 }
 .single-wide-card-title {
   padding: var(--spacing);
@@ -331,6 +432,10 @@ nav {
 .single-wide-card-download {
   margin: var(--spacing);
   height: 40px;
+}
+.single-wide-card-notice {
+  border: var(--spacing) solid var(--notice);
+  border-radius: var(--radius-large);
 }
 
 /* double cards, container is the area that contains both cards */

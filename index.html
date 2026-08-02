@@ -20,7 +20,7 @@
 
   <body id="theme-toggle">
 
-    <nav> 
+    <nav>
       <div class="nav">
         <a href="#">
           <img class="home-icon" src="favicon.png" alt="MSMS logo">
@@ -71,10 +71,41 @@
 
       <div id="filler-card"></div>
       
-      <!-- themes links -->
-      <div id="first-card">
-        <img src="images/monterey.png"> 
+      <!-- news and quick links -->
+
+      <!-- top slideshow of images -->
+      <div class="first-card-slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="slideshow-images slideshow-fade">
+          <img src="images/monterey.png">
+          <div class="slideshow-caption-text">A very cool caption</div>
+        </div>
+
+        <div class="slideshow-images slideshow-fade">
+          <img src="images/monterey.png">
+          <div class="slideshow-caption-text">mit please accept me</div>
+        </div>
+
+        <div class="slideshow-images slideshow-fade">
+          <img src="images/monterey.png">
+          <div class="slideshow-caption-text">wasnt this supposed to be a government website</div>
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="slideshow-backward" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="slideshow-forward" onclick="plusSlides(1)">&#10095;</a>
       </div>
+      <br>
+
+      <!-- The dots/circles -->
+      <div class="slideshow-dot-container" style="text-align:center">
+        <span class="slideshow-dot" onclick="currentSlide(1)"></span>
+        <span class="slideshow-dot" onclick="currentSlide(2)"></span>
+        <span class="slideshow-dot" onclick="currentSlide(3)"></span>
+      </div>
+
+
       <div class="single-wide-card">
         <img src="images/monterey.png"> 
       </div>
