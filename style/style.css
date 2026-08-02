@@ -185,6 +185,7 @@ nav {
   padding: 0 10% 0 10%;
   align-items: center;
   display: grid;
+  margin-top: var(--spacing-large);
   grid-template-columns: 1fr 1fr 1fr;
 }
 .footer-card {
@@ -311,7 +312,7 @@ nav {
 }
 /* br, but card-sized */
 .blank-card {
-  height: 10dvw;
+  height: 7dvw;
   opacity: 0;
 }
 
@@ -405,7 +406,7 @@ nav {
   width: 80%;
   background-color: var(--bg-card);
   border-radius: var(--radius);
-  margin: var(--spacing) auto var(--spacing) auto;
+  margin: var(--spacing-large) auto var(--spacing-large) auto;
 }
 .single-wide-card h1 {
   font-size: 2.5em;
@@ -415,7 +416,7 @@ nav {
   padding: var(--spacing);
 }
 .single-wide-card p {
-  font-size: 1.25em;
+  font-size: 1.3em;
   color: var(--text-card);
   text-align: center;
   margin: auto;
@@ -506,6 +507,7 @@ nav {
 .supergrid-card-title {
   font-size: 1.6em;
   padding: var(--spacing);
+  width: 100%;
 }
 .supergrid-card-title h1 {
   font-size: 1em;
@@ -544,14 +546,15 @@ nav {
 .supergrid-card-img {
   padding: var(--spacing-small);
   height: 150px;
+  border-radius: var(--radius);
 }
 .supergrid-card-img img {
   height: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
-  margin-right: auto !important;
-  float: right !important;
   border-radius: var(--radius);
+  float: right;
+  margin-right: 0px;
 }
 .supergrid-card-title-link {
   text-decoration: none !important;
