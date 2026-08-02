@@ -309,6 +309,11 @@ nav {
   font-size: 1.2em;
   padding: 0 var(--spacing) 0 var(--spacing);
 }
+/* br, but card-sized */
+.blank-card {
+  height: 10dvw;
+  opacity: 0;
+}
 
 /* slideshow */
 .first-card-slideshow-container {
