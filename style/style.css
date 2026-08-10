@@ -30,6 +30,7 @@ body {
   --spacing-xl: 25px;
 
   --card-max-width: 1300px;
+  --card-max-width-xs: 650px;
   --card-max-width-small: 900px;
   --card-max-width-large: 1600px;
 
@@ -362,6 +363,11 @@ nav {
 #first-card p {
   font-size: 1.2em;
   padding: 0 var(--spacing) 0 var(--spacing);
+}
+/* 404 error page */
+#fof {
+  width: 75%;
+  max-width: var(--card-max-width-xs);
 }
 /* br, but card-sized */
 .blank-card {
