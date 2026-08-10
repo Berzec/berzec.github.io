@@ -61,32 +61,61 @@ window.addEventListener("keydown", function (event) {
   }
 })
 
-window.addEventListener("DOMContentLoaded", function () {
-  const x = getLocalStorage("themeMode") || "light";
-  console.log(getLocalStorage("themeMode"), x);
 
-  let element = document.getElementById("theme-toggle"); 
-  if (x === "dark") {
-    element.classList.remove("theme-light");
-  }
-  else {
-    element.classList.add("theme-light");
-  }
+// expanding cards script (collapsibles)
+var coll = document.getElementsByClassName("expanding-card-single-title");
+var i;
+var chevron = document.getElementsByClassName("chevron-rotate-image");
 
-  console.log(element.classList);
-})
+const buttons = document.querySelectorAll(".expanding-card-single-title");
+
+buttons.forEach((button) => {
+  button.addEventListener("click", function () {
+    const chevron = this.querySelector(".chevron-rotate-image") || 
+                    this.parentElement.querySelector(".chevron-rotate-image");
+
+    if (chevron) {
+      const isRotated = chevron.style.transform === "rotate(90deg)";
+      chevron.style.transform = isRotated ? "rotate(0deg)" : "rotate(90deg)";
+    }
+  });
+});
+
+const titles = document.querySelectorAll(".expanding-card-single-title");
+
+titles.forEach((title) => {
+  title.addEventListener("click", function () {
+    // 1. Toggle title active class
+    this.classList.toggle("expanding-card-single-title-active");
+
+    // 2. Toggle content grid state
+    const content = this.nextElementSibling;
+    if (content) {
+      content.classList.toggle("is-open");
+    }
+
+    // 3. Toggle chevron rotation
+    const chevron = this.querySelector(".chevron-rotate-image");
+    if (chevron) {
+      chevron.classList.toggle("chevron-active");
+    }
+  });
+});
 
 
-// slideshow script (straight stolen from w3)
+
+// slideshow script (original code swiped from w3schools, but error if no slideshow on page, so gemini fixed it, this is ai code)
 let slideIndex = 1;
-showSlides(slideIndex);
 
-// Next/previous controls
+// Only initialize if slides exist on the page
+if (document.getElementsByClassName("slideshow-images").length > 0) {
+  showSlides(slideIndex);
+}
+
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -95,14 +124,24 @@ function showSlides(n) {
   let i;
   let slides = document.getElementsByClassName("slideshow-images");
   let dots = document.getElementsByClassName("slideshow-dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
+
+  // Guard clause: stop if no slides are found on the current page
+  if (slides.length === 0) return;
+
+  if (n > slides.length) { slideIndex = 1; }
+  if (n < 1) { slideIndex = slides.length; }
+
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
   for (i = 0; i < dots.length; i++) {
     dots[i].className = dots[i].className.replace(" slideshow-dot-active", "");
   }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " slideshow-dot-active";
-} 
+
+  slides[slideIndex - 1].style.display = "block";
+
+  // Safely set active class only if dots exist
+  if (dots.length > 0 && dots[slideIndex - 1]) {
+    dots[slideIndex - 1].className += " slideshow-dot-active";
+  }
+}
