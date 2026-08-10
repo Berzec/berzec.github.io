@@ -30,6 +30,8 @@ body {
   --spacing-xl: 25px;
 
   --card-max-width: 1300px;
+  --card-max-width-small: 900px;
+  --card-max-width-large: 1600px;
 
   --card-height: 70px;
 
@@ -649,6 +651,10 @@ nav {
   width: fit-content;
 }
 
+
+.legislative-tracker {
+  max-width: var(--card-max-width-small) !important;
+}
 
 /* expanding and collapsible cards */
 .expanding-card-single-container {
