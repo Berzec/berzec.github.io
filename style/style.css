@@ -29,9 +29,9 @@ body {
   --spacing-large: 15px;
   --spacing-xl: 25px;
 
-  --card-max-width: 1300px;
-  --card-max-width-xs: 650px;
-  --card-max-width-small: 900px;
+  --card-max-width: 1200px;
+  --card-max-width-xs: 600px;
+  --card-max-width-small: 800px;
   --card-max-width-large: 1600px;
 
   --card-height: 70px;
@@ -347,7 +347,7 @@ nav {
   position: relative;
   display: flex;
   background-color: var(--bg-card);
-  margin: 0 auto 30px auto;
+  margin: 0 auto 0 auto;
   color: var(--text-card);
   z-index: 3;
   overflow: auto;
@@ -493,11 +493,18 @@ nav {
   display: flex;
   background-color: var(--bg-card);
   border-radius: var(--radius);
-  margin: auto;
+  margin: var(--spacing-large) auto var(--spacing-large) auto;
   color: var(--text-card);
   text-decoration: none;
   width: 90%;
   max-width: var(--card-max-width);
+}
+.single-wide-card-link:hover {
+  background-color: var(--bg-card-hover);
+  transition: 0.2s;
+}
+.single-wide-card-link-text {
+  margin: auto;
 }
 .single-wide-card-link-text-wrapper {
   margin: auto;
@@ -607,13 +614,19 @@ nav {
   padding: unset;
   padding-bottom: var(--spacing);
 }
+/* this should be in <a>, not <div>, use only <a> for supergrid-card-link */
 .supergrid-card-link {
   display: flex;
-  margin-right: var(--spacing-small) !important;
+  background-color: var(--bg-card);
+  border-radius: var(--radius) !important;
   padding: var(--spacing-small);
   text-decoration: none;
   color: var(--text-card);
-  width: 100%;
+  min-height: 50px;
+}
+.supergrid-card-link:hover {
+  background-color: var(--bg-card-hover);
+  transition: 0.2s;
 }
 .supergrid-card-link-title-image {
   font-size: 1.6em;
@@ -642,19 +655,10 @@ nav {
   float: right;
   margin-right: 0px;
 }
+/* no image, just a link with words */
 .supergrid-card-title-link {
-  text-decoration: none !important;
-  width: 100%;
-  height: 100%;
-  border-radius: var(--radius);
-}
-.supergrid-card-title-link h1 {
-  text-decoration: none;
   font-size: 1.6em;
-  margin-left: auto;
-  margin-right: auto;
-  color: var(--text-card);
-  width: fit-content;
+  margin: auto;
 }
 
 
