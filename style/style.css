@@ -5,14 +5,12 @@
 
 
 /* this is here in an attempt to make white refresh flashbang go away */
-body {
-  background-color: rgba(26, 26, 26, 1);
-  font-family: 'rhd', sans-serif;
-  margin: 0 !important;
-  z-index: 1;
+.no-transition * {
+  transition: none !important;
 }
 
 /* universal variables */
+
 :root {
 
   /* roundness */
@@ -56,26 +54,26 @@ body {
 
   --text-body: rgba(225, 225, 225, 1);
 
-  --text-card: rgba(40, 40, 40, 1);
+  --text-card: rgba(240, 240, 240, 1);
 
-  --text-link: rgba(90, 130, 220, 0.9);
+  --text-link: rgba(100, 150, 255, 1);
 
   --text-button: rgba(200, 200, 215, 1); 
 
   /* background colors */
 
-  --bg-main: rgba(26, 26, 26, 1);
+  --bg-main: rgba(20, 20, 20, 1);
   --bg-main-clear: rgba(26, 26, 26, 0.5);
 
-  --bg-card: rgba(230, 233, 235, 1);
-  --bg-card-hover: rgba(160, 163, 165, 1);
+  --bg-card: rgba(45, 45, 50, 1);
+  --bg-card-hover: rgba(100, 103, 105, 1);
   
   --bg-nav: rgba(70, 70, 70, 0.9);
   --bg-nav-hover: rgba(150, 150, 150, 0.6);
   --bg-nav-selected: rgba(120, 120, 120, 0.5);
   --bg-nav-mobile: rgba(50, 50, 50, 0.8);
 
-  --bg-footer: rgba(15,15,15,1);
+  --bg-footer: rgba(5,5,5,1);
 
   --bg-button: rgba(100, 100, 100, 1);
 
@@ -105,6 +103,63 @@ body {
 
 }
 
+/* LIGHT MODE */
+
+.light-theme {
+  --blue-original: rgba(100, 150, 250, 1);
+  
+  /* colors */
+
+  --text-body: rgba(25, 25, 25, 1);
+
+  --text-card: rgba(40, 40, 40, 1);
+
+  --text-link: rgba(30, 100, 255, 0.9);
+
+  --text-button: rgba(200, 200, 215, 1); 
+
+  /* background colors */
+
+  --bg-main: rgba(210, 213, 215, 1);
+  --bg-main-clear: rgba(200, 200, 200, 0.5);
+
+  --bg-card: rgba(230, 233, 235, 1);
+  --bg-card-hover: rgba(160, 163, 165, 1);
+  
+  --bg-nav: rgba(230, 230, 230, 0.9);
+  --bg-nav-hover: rgba(150, 150, 150, 0.6);
+  --bg-nav-selected: rgba(120, 120, 120, 0.5);
+  --bg-nav-mobile: rgba(220, 220, 220, 0.7);
+
+  --bg-footer: rgba(190,190,190,1);
+
+  --bg-button: rgba(180, 180, 180, 1);
+
+  --bg-button-hover: rgba(140, 140, 140, 0.9);
+
+  --bg-setting-card: rgba(60, 60, 60, 1);
+
+  /* button colors */
+
+  --button-close: rgba(230, 70, 70, 1);
+  --button-close-hover: rgba(250, 60, 60, 1);
+
+  --slideshow-dot: rgba(180, 180, 180, 1);
+  --slideshow-dot-hover: rgba(110, 113, 115, 0.8);
+  --slideshow-dot-selected: rgba(50, 53, 55, 1);
+
+  /* other colors */
+
+  --warning: rgba(240, 50, 50, 1);
+  --notice: rgba(80, 110, 220, 1);
+
+  --pass: rgba(120, 220, 160, 1);
+  --fail: rgba(220, 80, 80, 1);
+  --tabled: rgba(240, 169, 40, 1);
+  --veto: rgba(190, 110, 240, 1);
+  --na: rgba(200, 200, 200, 1);
+}
+
 /* font */
 @font-face {
   font-family: 'rhd';
@@ -112,6 +167,14 @@ body {
   font-weight: normal;
   font-style: normal;
   font-display: swap;
+}
+
+body {
+  background-color: var(--bg-main);
+  font-family: 'rhd', sans-serif;
+  margin: 0;
+  z-index: 1;
+  transition: 0.3s ease;
 }
 main {
   min-height: calc(100dvh - 225px);
@@ -136,7 +199,6 @@ nav {
   backdrop-filter: blur(var(--blur-light));
   background-image: linear-gradient(var(--bg-main), var(--clear));
 }
-
 .center-nav {
   border-radius: var(--radius-circle);
   background-color: var(--bg-nav);
@@ -147,6 +209,7 @@ nav {
   margin: auto;
   padding: var(--spacing-small);
   opacity: 0.9; 
+  z-index: 1000;
 }
 .center-nav-mobile {
   display: none;
@@ -235,9 +298,6 @@ nav {
 /* BUTTONS */
 /* circular */
 .button-circular {
-  display: block;
-  right: 0;
-  float: right;
   height: 40px;
   width: 40px;
   border: none;
@@ -263,6 +323,24 @@ nav {
 .info-hover:hover {
   display: block;
 }
+.theme-toggle {
+  position: absolute;
+  right: 0;
+  margin: var(--spacing-large) var(--spacing-large) 0 0;
+}
+.lighticon {
+  display: none;
+  height: 25px;
+  width: 25px;
+  margin: auto;
+}
+.darkicon {
+  display: block;
+  height: 25px;
+  width: 25px;
+  margin: auto;
+}
+
 
 /* LEGISLATION STATUS CIRCLES */
 .pass-circle, .fail-circle, .tabled-circle, .veto-circle, .na-circle, .clear-circle {
@@ -422,6 +500,7 @@ nav {
   font-size: 1em;
   width: 100%;
   text-align: center;
+  border-radius: var(--radius);
   background-color: var(--bg-main);
   margin: auto;
 }
@@ -601,6 +680,7 @@ nav {
   font-size: 1.6em;
   padding: var(--spacing);
   width: 100%;
+  color: var(--text-card);
 }
 .supergrid-card-title h1 {
   font-size: 1em;
@@ -857,7 +937,7 @@ nav {
     transition: 1s;
   }  
   #theme-toggle-mobile-id {
-    display: block;
+    display: flex;
     margin-top: var(--spacing-large);
     margin-left: var(--spacing-large);
     background-color: var(--bg-button);
@@ -867,6 +947,9 @@ nav {
   }
   #theme-toggle-desktop-id {
     display: none;
+  }
+  .theme-toggle {
+    left: 0 !important;
   }
   #nav-link-mobile-filler {
     position: relative;
@@ -880,6 +963,7 @@ nav {
     text-align: center;
   }
   .menu-close-mobile-id {
+    display: flex;
     background-color: var(--button-close);
     margin-top: var(--spacing-large);    
     margin-right: var(--spacing-large);

@@ -3,40 +3,39 @@
   <head>
 
     <meta charset="UTF-8">
-    <meta name="google-site-verification" content="Tti6Yz0ewO0_4vW6VZGX3cMvfbypLeLV4AHyADnmPDQ"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="MSMS SGA">
     <meta name="description" content="Official website of the Mississippi School for Math and Science Student Government Association">
     <meta name="keywords" content="Student Government, MSMS, SGA">
 
-    <link rel="stylesheet" href="style/style.css">
-    <script language="javascript" type="text/javascript" src="script/javascript.js" defer></script>
-    
-    <link rel="icon" href="favicon.svg">
-    <title>test</title>
+    <link rel="stylesheet" href="/style/style.css">
+    <script language="javascript" type="text/javascript" src="/script/javascript.js" defer></script>
 
+    <link rel="icon" href="/favicon.svg">
+    <title>News | Main</title>
+    
   </head>
 
 
   <body id="theme-toggle">
 
-    <nav>
+    <nav> 
       <div class="nav">
-        <a href="#">
-          <img class="home-icon" src="favicon.png" alt="MSMS logo">
+        <a href="/">
+          <img class="home-icon" src="/favicon.png" alt="MSMS logo">
         </a>
 
         <!-- center pill nav bar -->
         <div class="center-nav">
-          <a class="nav-link" href="news/">News</a>
-          <a class="nav-link" href="executive/">Executive</a>
-          <a class="nav-link" href="legislative/">Legislative</a>
-          <a class="nav-link" href="judiciary/">Judiciary</a>
-          <a class="nav-link" href="constitution/">Constitution</a>
-          <a class="nav-link" href="about.html">About</a>
+          <a class="nav-link nav-link-selected" href="/news/">News</a>
+          <a class="nav-link" href="/executive/">Executive</a>
+          <a class="nav-link" href="/legislative/">Legislative</a>
+          <a class="nav-link" href="/judiciary/">Judiciary</a>
+          <a class="nav-link" href="/constitution/">Constitution</a>
+          <a class="nav-link" href="/about.html">About</a>
         </div>
 
-        <button class="setting-toggler" onclick="settingToggle()"><img id="menu-icon" src="icons/menu-icon.svg" alt="settings menu"></button>
+        <button class="setting-toggler" onclick="settingToggle()"><img id="menu-icon" src="/icons/menu-icon.svg" alt="settings menu"></button>
         <button class="button-circular theme-toggle" id="theme-toggle-desktop-id" onclick="themeToggle()"><img class="lighticon" src="/icons/lightmode.svg"><img class="darkicon" src="/icons/darkmode.svg"></button>
 
       </div>
@@ -51,48 +50,46 @@
           <!-- website controls and buttons -->
           <div class="global-setting-bar-toggle-mobile">
 
-            <button class="setting-toggler menu-close-mobile-id" onclick="settingToggle()"><img id="menu-icon" src="icons/close-icon.svg" alt="close button"></button>
+            <button class="setting-toggler menu-close-mobile-id" onclick="settingToggle()"><img id="menu-icon" src="/icons/close-icon.svg" alt="close button"></button>
             <button class="button-circular theme-toggle" id="theme-toggle-mobile-id" onclick="themeToggle()"><img class="lighticon" src="/icons/lightmode.svg"><img class="darkicon" src="/icons/darkmode.svg"></button>
 
           </div>
 
+
           <p id="nav-link-mobile-filler"></p>
           <a class="nav-link-mobile" href="/">Home</a>
-          <a class="nav-link-mobile" href="news/">News</a>
-          <a class="nav-link-mobile" href="executive/">Executive</a>
-          <a class="nav-link-mobile" href="legislative/">Legislative</a>
-          <a class="nav-link-mobile" href="judiciary/">Judiciary</a>
-          <a class="nav-link-mobile" href="constitution/">Constitution</a>
-          <a class="nav-link-mobile" href="about.html">About</a>
+          <a class="nav-link-mobile" href="/news/">News</a>
+          <a class="nav-link-mobile" href="/executive/">Executive</a>
+          <a class="nav-link-mobile" href="/legislative/">Legislative</a>
+          <a class="nav-link-mobile" href="/judiciary/">Judiciary</a>
+          <a class="nav-link-mobile" href="/constitution/">Constitution</a>
+          <a class="nav-link-mobile" href="/about.html">About</a>
   
         </div>
       </div>
     </nav>
 
-    <!-- main body of website -->
     <main>
 
       <div id="filler-card"></div>
-      
-      <!-- news and quick links -->
 
       <!-- top slideshow of images -->
       <div class="first-card-slideshow-container">
 
         <!-- Full-width images with number and caption text -->
         <div class="slideshow-images slideshow-fade">
-          <img src="images/monterey.png">
-          <div class="slideshow-caption-text">A very cool caption</div>
+          <img src="/images/msmscollegereveal2026.jpg">
+          <div class="slideshow-caption-text">Class of 2026 College Reveal Day</div>
         </div>
 
         <div class="slideshow-images slideshow-fade">
-          <img src="images/monterey.png">
-          <div class="slideshow-caption-text">mit please accept me</div>
+          <img src="/images/tahoe.png">
+          <div class="slideshow-caption-text">a super cool caption</div>
         </div>
 
         <div class="slideshow-images slideshow-fade">
-          <img src="images/monterey.png">
-          <div class="slideshow-caption-text">wasnt this supposed to be a government website</div>
+          <img src="/images/highsierra.png">
+          <div class="slideshow-caption-text">me when i</div>
         </div>
 
         <!-- Next and previous buttons -->
@@ -108,17 +105,12 @@
         <span class="slideshow-dot" onclick="currentSlide(3)"></span>
       </div>
 
+      <!-- mission text -->
+      <div class="single-wide-card">
+        <h1>SGA News</h1>
+        <p>No news for now. Check back soon!</p>
+      </div>
 
-      <div class="single-wide-card">
-        <img src="images/monterey.png"> 
-      </div>
-      <div class="single-wide-card">
-        <img src="images/monterey.png"> 
-      </div>
-      <div class="single-wide-card">
-        <p>hi</p>
-      </div>
-      
     </main>
 
     <!-- bottom of website -->
@@ -126,7 +118,7 @@
 
       <!-- msms logo -->
       <div class="footer-card">
-        <img src="favicon.png">
+        <img src="/favicon.png">
       </div>
 
       <!-- contacts -->
@@ -147,7 +139,7 @@
       </div>
       
     </footer>
-  
+
   </body>
 
 </html>

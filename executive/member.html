@@ -27,14 +27,16 @@
 
         <!-- center pill nav bar -->
         <div class="center-nav">
-          <a class="nav-link nav-link-selected" href="/executive/">Executive</a>
-          <a class="nav-link" href="/legislative/">Legislative</a>
-          <a class="nav-link" href="/judiciary/">Judiciary</a>
-          <a class="nav-link" href="/constitution/">Constitution</a>
-          <a class="nav-link" href="/about.html">About</a>
+            <a class="nav-link" href="/news/">News</a>
+            <a class="nav-link nav-link-selected" href="/executive/">Executive</a>
+            <a class="nav-link" href="/legislative/">Legislative</a>
+            <a class="nav-link" href="/judiciary/">Judiciary</a>
+            <a class="nav-link" href="/constitution/">Constitution</a>
+            <a class="nav-link" href="/about.html">About</a>
         </div>
 
         <button class="setting-toggler" onclick="settingToggle()"><img id="menu-icon" src="/icons/menu-icon.svg" alt="settings menu"></button>
+        <button class="button-circular theme-toggle" id="theme-toggle-desktop-id" onclick="themeToggle()"><img class="lighticon" src="/icons/lightmode.svg"><img class="darkicon" src="/icons/darkmode.svg"></button>
         
       </div>
     
@@ -49,11 +51,14 @@
           <div class="global-setting-bar-toggle-mobile">
 
             <button class="setting-toggler menu-close-mobile-id" onclick="settingToggle()"><img id="menu-icon" src="/icons/close-icon.svg" alt="close button"></button>
-            
+            <button class="button-circular theme-toggle" id="theme-toggle-mobile-id" onclick="themeToggle()"><img class="lighticon" src="/icons/lightmode.svg"><img class="darkicon" src="/icons/darkmode.svg"></button>
+
           </div>
 
 
           <p id="nav-link-mobile-filler"></p>
+          <a class="nav-link-mobile" href="/">Home</a>
+          <a class="nav-link-mobile" href="/news/">News</a>
           <a class="nav-link-mobile" href="/executive/">Executive</a>
           <a class="nav-link-mobile" href="/legislative/">Legislative</a>
           <a class="nav-link-mobile" href="/judiciary/">Judiciary</a>

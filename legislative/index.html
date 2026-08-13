@@ -27,6 +27,7 @@
 
         <!-- center pill nav bar -->
         <div class="center-nav">
+          <a class="nav-link" href="/news/">News</a>
           <a class="nav-link" href="/executive/">Executive</a>
           <a class="nav-link nav-link-selected" href="/legislative/">Legislative</a>
           <a class="nav-link" href="/judiciary/">Judiciary</a>
@@ -35,7 +36,7 @@
         </div>
         
         <button class="setting-toggler" onclick="settingToggle()"><img id="menu-icon" src="/icons/menu-icon.svg" alt="settings menu"></button>
-
+        <button class="button-circular theme-toggle" id="theme-toggle-desktop-id" onclick="themeToggle()"><img class="lighticon" src="/icons/lightmode.svg"><img class="darkicon" src="/icons/darkmode.svg"></button>
       </div>
     
 
@@ -49,10 +50,13 @@
           <div class="global-setting-bar-toggle-mobile">
 
             <button class="setting-toggler menu-close-mobile-id" onclick="settingToggle()"><img id="menu-icon" src="/icons/close-icon.svg" alt="close button"></button>            
+            <button class="button-circular theme-toggle" id="theme-toggle-mobile-id" onclick="themeToggle()"><img class="lighticon" src="/icons/lightmode.svg"><img class="darkicon" src="/icons/darkmode.svg"></button>
           </div>
 
 
           <p id="nav-link-mobile-filler"></p>
+          <a class="nav-link-mobile" href="/">Home</a>
+          <a class="nav-link-mobile" href="/news/">News</a>
           <a class="nav-link-mobile" href="/executive/">Executive</a>
           <a class="nav-link-mobile" href="/legislative/">Legislative</a>
           <a class="nav-link-mobile" href="/judiciary/">Judiciary</a>
@@ -77,6 +81,12 @@
       <div class="single-wide-card">
         <h1>The Legislative Branch Mission</h1>
         <p>MSMS SGA's Legislative Branch is dedicated towards proposing new ideas and changes that benefit the MSMS community. From rule amendments to staff recognition, the Legislative Branch will be advocating for change, ensuring that MSMS will be ready for the present and future.</p>
+      </div>
+
+      <!-- election notice text -->
+      <div class="single-wide-card">
+        <h1>Senate Elections!</h1>
+        <p>...will be held in the near future. Dates will be posted soon.</p>
       </div>
 
       <!-- member list link -->

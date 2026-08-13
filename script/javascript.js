@@ -1,7 +1,7 @@
 // make more nice look look
 
 // BUTTON FUNCTIONS
-
+// LocalStorage helpers
 function setLocalStorage(key, value) {
   localStorage.setItem(key, value);
 }
@@ -10,13 +10,50 @@ function getLocalStorage(key) {
   return localStorage.getItem(key);
 }
 
-// function setLocalStorage(key, value) {
-//   localStorage.setItem(key, value);
-// }
+function updateThemeIcons(isLight) {
+  const lightIcons = document.querySelectorAll(".lighticon");
+  const darkIcons = document.querySelectorAll(".darkicon");
 
-// function getLocalStorage(key) {
-//   return localStorage.getItem(key);
-// }
+  lightIcons.forEach(icon => {
+    icon.style.display = isLight ? "block" : "none";
+  });
+
+  darkIcons.forEach(icon => {
+    icon.style.display = isLight ? "none" : "block";
+  });
+}
+
+// Toggle light/dark theme
+function themeToggle() {
+  const isLight = document.body.classList.toggle("light-theme");
+  setLocalStorage("themeMode", isLight ? "light" : "dark");
+  updateThemeIcons(isLight);
+}
+
+// Apply stored theme on startup without transition flickering
+function applyStoredTheme() {
+  // Prevent transition animation on initial load
+  document.documentElement.classList.add("no-transition");
+
+  const storedTheme = getLocalStorage("themeMode");
+  const isLight = storedTheme === "light";
+  
+  if (storedTheme === "light") {
+    document.body.classList.add("light-theme");
+  } else {
+    document.body.classList.remove("light-theme");
+  }
+  updateThemeIcons(isLight);
+
+  // Re-enable transitions after initial render
+  requestAnimationFrame(() => {
+    document.documentElement.classList.remove("no-transition");
+  });
+}
+
+// Run immediately on script load
+applyStoredTheme();
+
 
 // open menu
 function settingToggle() {
