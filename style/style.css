@@ -27,10 +27,10 @@
   --spacing-large: 15px;
   --spacing-xl: 25px;
 
-  --card-max-width: 1200px;
+  --card-max-width: 1000px;
   --card-max-width-xs: 600px;
   --card-max-width-small: 800px;
-  --card-max-width-large: 1600px;
+  --card-max-width-large: 1500px;
 
   --card-height: 70px;
 
@@ -120,15 +120,15 @@
 
   /* background colors */
 
-  --bg-main: rgba(210, 213, 215, 1);
-  --bg-main-clear: rgba(200, 200, 200, 0.5);
+  --bg-main: rgba(240, 243, 245, 1);
+  --bg-main-clear: rgba(220, 220, 220, 0.1);
 
-  --bg-card: rgba(230, 233, 235, 1);
+  --bg-card: rgba(210, 213, 215, 1);
   --bg-card-hover: rgba(160, 163, 165, 1);
   
-  --bg-nav: rgba(230, 230, 230, 0.9);
-  --bg-nav-hover: rgba(150, 150, 150, 0.6);
-  --bg-nav-selected: rgba(120, 120, 120, 0.5);
+  --bg-nav: rgba(210, 210, 210, 0.9);
+  --bg-nav-hover: rgba(160, 160, 160, 0.6);
+  --bg-nav-selected: rgba(130, 130, 130, 0.5);
   --bg-nav-mobile: rgba(220, 220, 220, 0.7);
 
   --bg-footer: rgba(190,190,190,1);
@@ -144,7 +144,7 @@
   --button-close: rgba(230, 70, 70, 1);
   --button-close-hover: rgba(250, 60, 60, 1);
 
-  --slideshow-dot: rgba(180, 180, 180, 1);
+  --slideshow-dot: rgba(200, 200, 200, 1);
   --slideshow-dot-hover: rgba(110, 113, 115, 0.8);
   --slideshow-dot-selected: rgba(50, 53, 55, 1);
 
@@ -153,11 +153,11 @@
   --warning: rgba(240, 50, 50, 1);
   --notice: rgba(80, 110, 220, 1);
 
-  --pass: rgba(120, 220, 160, 1);
+  --pass: rgba(100, 200, 140, 1);
   --fail: rgba(220, 80, 80, 1);
   --tabled: rgba(240, 169, 40, 1);
   --veto: rgba(190, 110, 240, 1);
-  --na: rgba(200, 200, 200, 1);
+  --na: rgba(170, 170, 170, 1);
 }
 
 /* font */
@@ -666,7 +666,7 @@ nav {
   grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
   gap: var(--spacing-large);
   padding: var(--spacing);
-  width: 92.5dvw;
+  width: 90dvw;
   max-width: var(--card-max-width);
   margin: auto;
 }
@@ -681,6 +681,7 @@ nav {
   padding: var(--spacing);
   width: 100%;
   color: var(--text-card);
+  margin: auto auto auto var(--spacing);
 }
 .supergrid-card-title h1 {
   font-size: 1em;
