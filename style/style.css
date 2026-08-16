@@ -634,26 +634,31 @@ nav {
   width: 40px !important;
 }
 .single-wide-card-text-and-image {
-  width: 90%;
+  width: 90dvw;
   max-width: var(--card-max-width);
   background-color: var(--bg-card);
   margin: var(--spacing) auto var(--spacing) auto;
   border-radius: var(--radius);
+  color: var(--text-card);
   display: flex;
 }
 .single-wide-card-text-and-image h1 {
   font-size: 1.6em;
   padding: var(--spacing);
   margin: auto;
-  margin-left: var(--spacing) !important;
   width: fit-content;
 }
 
 .single-wide-card-text-and-image img {
   padding: var(--spacing-small);
-  height: 150px;
+  height: 200px;
   border-radius: var(--radius);
 }
+.single-wide-card-text-and-image .news img {
+  max-height: 350px;
+  height: 15dvh;
+}
+
 
 .single-wide-card-notice {
   border: var(--spacing) solid var(--notice);
@@ -1024,6 +1029,22 @@ nav {
   }
 
   /* cards and stuff */
+  .single-wide-card-text-and-image {
+    display: block;
+  }
+  .single-wide-card-text-and-image h1 {
+    text-align: center;
+  }
+  .single-wide-card-text-and-image img {
+    display: block;
+    max-height: unset;
+    margin: auto !important;
+    padding: var(--spacing-small);
+    width: 95%;
+    height: 95%;
+    max-width: 400px;
+  }
+
   .duo-container-card {
     flex-direction: column;
   }
