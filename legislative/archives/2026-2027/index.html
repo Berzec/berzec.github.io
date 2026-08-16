@@ -8,11 +8,11 @@
     <meta name="description" content="Official website of the Mississippi School for Math and Science Student Government Association">
     <meta name="keywords" content="Student Government, MSMS, SGA">
 
-    <link rel="stylesheet" href="/style/style.css">
+    <link rel="stylesheet" href="/style/style.css" defer>
     <script language="javascript" type="text/javascript" src="/script/javascript.js" defer></script>
 
     <link rel="icon" href="/favicon.svg">
-    <title>News | Main</title>
+    <title>Archive 2026-2027 | Legislative</title>
     
   </head>
 
@@ -27,23 +27,22 @@
 
         <!-- center pill nav bar -->
         <div class="center-nav">
-          <a class="nav-link nav-link-selected" href="/news/">News</a>
+          <a class="nav-link" href="/news/">News</a>
           <a class="nav-link" href="/executive/">Executive</a>
-          <a class="nav-link" href="/legislative/">Legislative</a>
+          <a class="nav-link nav-link-selected" href="/legislative/">Legislative</a>
           <a class="nav-link" href="/judiciary/">Judiciary</a>
           <a class="nav-link" href="/constitution/">Constitution</a>
           <a class="nav-link" href="/about.html">About</a>
         </div>
-
+        
         <button class="setting-toggler" onclick="settingToggle()"><img id="menu-icon" src="/icons/menu-icon.svg" alt="settings menu"></button>
         <button class="button-circular theme-toggle" id="theme-toggle-desktop-id" onclick="themeToggle()"><img class="lighticon" src="/icons/lightmode.svg"><img class="darkicon" src="/icons/darkmode.svg"></button>
-
       </div>
     
 
       <!-- mobile nav and some other -->
       <div id="setting-card">
-                
+
         <!-- navigation for mobile -->
         <div class="center-nav-mobile" id="center-nav-mobile-id">
           
@@ -71,99 +70,42 @@
 
     <main>
 
-      <div id="filler-card"></div>
+        <div id="filler-card"></div>
 
-      <!-- top slideshow of images -->
-      <div class="first-card-slideshow-container">
-
-        <!-- Full-width images with number and caption text -->
-        <div class="slideshow-images slideshow-fade">
-          <img src="/images/msmscollegereveal2026.jpg">
-          <div class="slideshow-caption-text">Class of 2026 College Reveal Day</div>
+        <div id="first-card" style="text-align: center; display: block;">
+            <h1>SGA Senate 2026-2027</h1>
+            <p>Archived Bills of the 2026-2027 School Year</p>
         </div>
 
-        <div class="slideshow-images slideshow-fade">
-          <img src="/images/tahoe.png">
-          <div class="slideshow-caption-text">a super cool caption</div>
-        </div>
+        <!-- SEPTEMBER -->
 
-        <div class="slideshow-images slideshow-fade">
-          <img src="/images/highsierra.png">
-          <div class="slideshow-caption-text">somewhere pretty</div>
-        </div>
-
-        <!-- Next and previous buttons -->
-        <a class="slideshow-backward" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="slideshow-forward" onclick="plusSlides(1)">&#10095;</a>
-      </div>
-      <br>
-
-      <!-- The dots/circles -->
-      <div class="slideshow-dot-container" style="text-align:center">
-        <span class="slideshow-dot" onclick="currentSlide(1)"></span>
-        <span class="slideshow-dot" onclick="currentSlide(2)"></span>
-        <span class="slideshow-dot" onclick="currentSlide(3)"></span>
-      </div>
-
-      <div class="single-wide-card single-wide-card-header">
-        <h2>Recent News</h2>
-      </div>
-
-      <!-- list of events -->
-      <div class="supergrid-container">
-
-        <div class="supergrid-card">
-            <div class="supergrid-card-title">
-                <h1>None for now</h1>
-                <p>..check back soon!</p>
+        <div class="expanding-card-single-container legislative-tracker">
+          <div type="button" class="expanding-card-single-title">September 2026<div class="expanding-card-single-chevron"><img class="chevron-rotate-image chevron-rotate" src="/icons/chevron.svg"></div></div>
+          <div class="expanding-card-single-content">
+            <div class="expanding-card-content-wrapper">
+              <div class="expanding-card-single-content-link">
+                <div class="pass-circle"></div><div class="tabled-circle"></div>
+                <a target="_blank" href="/documents/senate-legislation/2025-2026/9 September/SB1_TB_Rymer_9-17-25.pdf">SB1 William Rymer</a>
+                <p>To allow students who have received a Level III violation to appeal for a higher privilege plan after one year if improvement has been shown.</p>
+              </div>
+              <div class="expanding-card-single-content-link">
+                <div class="pass-circle"></div><div class="na-circle"></div>
+                <a target="_blank" href="/documents/senate-legislation/2025-2026/9 September/SB2_P_Germany_9-17-25.pdf">SB2 Connor Germany</a>
+                <p>To allow students access to the tennis courts during daylight hours without special approval.</p>
+              </div>
+              <div class="expanding-card-single-content-link">
+                <div class="pass-circle"></div><div class="fail-circle"></div>
+                <a target="_blank" href="/documents/senate-legislation/2025-2026/9 September/SB3_P_Chung_Foster_Rai_9-24-25.pdf">SB3 Katie Chung, Anya Rai, Sonora Foster</a>
+                <p>To eliminate the need of wellness seminars if sufficient wellness hours are achieved.</p>
+              </div>
+              <div class="expanding-card-single-content-link">
+                <div class="pass-circle"></div><div class="tabled-circle"></div>
+                <a target="_blank" href="/documents/senate-legislation/2025-2026/9 September/SR1_P_Jackson_Storment_9-24-25.pdf">SR1 Jolanna Jackson, Rebekah Storment</a>
+                <p>To further ensure the safety of MSMS students.</p>
+              </div>
             </div>
+          </div>
         </div>
-
-      </div>
-
-      <div class="single-wide-card single-wide-card-header">
-        <h2>Upcoming Events</h2>
-      </div>
-
-      <!-- list of events -->
-      <div class="supergrid-container">
-
-        <div class="supergrid-card">
-            <div class="supergrid-card-title">
-                <h1>Senate Interest Meeting</h1>
-                <p>Monday 17 August 2026 6PM, Shackleford Auditorium</p>
-            </div>
-        </div>
-
-        <div class="supergrid-card">
-            <div class="supergrid-card-title">
-                <h1>Senate Meeting</h1>
-                <p>Wednesday 2 September 2026 6PM, Hooper Auditorium</p>
-            </div>
-        </div>
-
-        <div class="supergrid-card">
-            <div class="supergrid-card-title">
-                <h1>Senate Meeting</h1>
-                <p>Wednesday 9 September 2026 6PM, Hooper Auditorium</p>
-            </div>
-        </div>
-
-      </div>
-
-      <!-- news list link -->
-      <a class="single-wide-card-link" href="articles/">
-        <div class="single-wide-card-link-text">
-          <h1>All News</h1>
-        </div>
-      </a>
-      
-      <!-- events link -->
-      <a class="single-wide-card-link" href="events/">
-        <div class="single-wide-card-link-text">
-          <h1>All Events</h1>
-        </div>
-      </a>
 
     </main>
 
@@ -174,7 +116,7 @@
       <div class="footer-card">
         <img src="/favicon.png">
       </div>
-
+      
       <!-- contacts -->
       <div class="footer-card">
         <h1>Contact</h1>

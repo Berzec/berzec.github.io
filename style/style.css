@@ -548,7 +548,14 @@ nav {
   margin: var(--spacing-large) auto var(--spacing-large) auto;
 }
 .single-wide-card h1 {
-  font-size: 2.5em;
+  font-size: 2.2em;
+  color: var(--text-card);
+  text-align: center;
+  margin: auto;
+  padding: var(--spacing);
+}
+.single-wide-card h2 {
+  font-size: 2em;
   color: var(--text-card);
   text-align: center;
   margin: auto;
@@ -564,6 +571,13 @@ nav {
 .single-wide-card img {
   width: 100%;
   border-radius: inherit;
+  max-height: 500px;
+  object-fit: cover;
+}
+.single-wide-card-header {
+  color: var(--text-card);
+  font-size: 1.2em;
+  background-color: var(--bg-main);
 }
 .single-wide-card-title {
   padding: var(--spacing);
@@ -618,6 +632,27 @@ nav {
   margin-right: var(--spacing);
   height: 40px !important;
   width: 40px !important;
+}
+.single-wide-card-text-and-image {
+  width: 90%;
+  max-width: var(--card-max-width);
+  background-color: var(--bg-card);
+  margin: var(--spacing) auto var(--spacing) auto;
+  border-radius: var(--radius);
+  display: flex;
+}
+.single-wide-card-text-and-image h1 {
+  font-size: 1.6em;
+  padding: var(--spacing);
+  margin: auto;
+  margin-left: var(--spacing) !important;
+  width: fit-content;
+}
+
+.single-wide-card-text-and-image img {
+  padding: var(--spacing-small);
+  height: 150px;
+  border-radius: var(--radius);
 }
 
 .single-wide-card-notice {
@@ -681,7 +716,8 @@ nav {
   padding: var(--spacing);
   width: 100%;
   color: var(--text-card);
-  margin: auto auto auto var(--spacing);
+  margin: auto;
+  text-align: center;
 }
 .supergrid-card-title h1 {
   font-size: 1em;
@@ -740,6 +776,9 @@ nav {
 .supergrid-card-title-link {
   font-size: 1.6em;
   margin: auto;
+}
+.member .supergrid-card-title {
+  text-align: unset;
 }
 
 
@@ -995,7 +1034,7 @@ nav {
 
   /* SLIDESHOW */
   .slideshow-images {
-    height: 70dvw;
+    height: 50dvw;
   }
 
 }
