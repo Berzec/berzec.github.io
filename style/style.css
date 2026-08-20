@@ -31,6 +31,7 @@
   --card-max-width-xs: 600px;
   --card-max-width-small: 800px;
   --card-max-width-large: 1500px;
+  --card-max-width-xl: 2000px;
 
   --card-height: 70px;
 
@@ -589,7 +590,7 @@ nav {
   margin: var(--spacing-large) auto var(--spacing-large) auto;
   color: var(--text-card);
   text-decoration: none;
-  width: 90%;
+  width: 90dvw;
   max-width: var(--card-max-width);
 }
 .single-wide-card-link:hover {
@@ -784,6 +785,14 @@ nav {
 }
 .member .supergrid-card-title {
   text-align: unset;
+}
+.news-list {
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)) !important;
+  max-width: var(--card-max-width-xl);
+  gap: var(--spacing) !important;
+}
+.news-list .supergrid-card-link .supergrid-card-img {
+  margin: auto 0 auto auto !important;
 }
 
 
