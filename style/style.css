@@ -163,8 +163,8 @@
 
 /* font */
 @font-face {
-  font-family: 'rhd';
-  src: url("Red_Hat_Display/RedHatDisplay-VariableFont_wght.ttf");
+  font-family: 'font-main';
+  src: url("NebulaSans/WOFF2/NebulaSans-Book.woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -172,7 +172,7 @@
 
 body {
   background-color: var(--bg-main);
-  font-family: 'rhd', sans-serif;
+  font-family: 'font-main', sans-serif;
   margin: 0;
   z-index: 1;
   transition: 0.3s ease;
@@ -599,6 +599,7 @@ nav {
 }
 .single-wide-card-link-text {
   margin: auto;
+  text-align: center;
 }
 .single-wide-card-link-text-wrapper {
   margin: auto;
