@@ -753,12 +753,16 @@ nav {
   transition: 0.2s;
 }
 .supergrid-card-link-title-image {
-  font-size: 1.6em;
   padding: var(--spacing);
   padding: unset;
   margin: auto;
   margin-left: var(--spacing) !important;
-  width: fit-content;
+}
+.supergrid-card-link-title-image h1 {
+  font-size: 1.6em;
+}
+.supergrid-card-link-title-image p {
+  font-size: 1em;
 }
 .supergrid-card-link img {
   height: 40px; 
