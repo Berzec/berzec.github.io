@@ -660,6 +660,13 @@ nav {
   max-height: 350px;
   height: 15dvh;
 }
+.single-wide-card.news {
+  border-radius: var(--radius-small);
+}
+.single-wide-card.news p{
+  text-align: left !important;
+  margin-left: 0 !important;
+}
 
 
 .single-wide-card-notice {
@@ -762,7 +769,7 @@ nav {
   font-size: 1.6em;
 }
 .supergrid-card-link-title-image p {
-  font-size: 1em;
+  font-size: 1.1em;
 }
 .supergrid-card-link img {
   height: 40px; 
@@ -914,7 +921,7 @@ nav {
 }
 
 /* media query for mobile (condensing stuff) */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 750px) {
   /* GENERAL CLASSES */
 
 

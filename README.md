@@ -1,3 +1,2 @@
 ### MSMS SGA Website
-
-The official website for the MSMS Student Government Association. See news, events, and all things government right here on MSMS's very own SGA website.
+See news, events, legislation, and all things student government right here on MSMS's own official SGA website!
