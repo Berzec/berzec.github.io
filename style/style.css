@@ -17,8 +17,10 @@
 
   --radius: 25px;
   --radius-small: 15px;
+  --radius-xs: 10px;
   --radius-large: 50px;
-  --radius-circle: 1000px;
+  --radius-xl: 75px;
+  --radius-circle: 10000px;
 
   /* spacing and sizing */
 
@@ -124,8 +126,8 @@
   --bg-main: rgba(240, 243, 245, 1);
   --bg-main-clear: rgba(220, 220, 220, 0.1);
 
-  --bg-card: rgba(210, 213, 215, 1);
-  --bg-card-hover: rgba(160, 163, 165, 1);
+  --bg-card: rgba(220, 223, 225, 1);
+  --bg-card-hover: rgba(180, 183, 185, 1);
   
   --bg-nav: rgba(210, 210, 210, 0.9);
   --bg-nav-hover: rgba(160, 160, 160, 0.6);
@@ -592,10 +594,11 @@ nav {
   text-decoration: none;
   width: 90dvw;
   max-width: var(--card-max-width);
+  transition: 0.3s ease-in-out;
 }
 .single-wide-card-link:hover {
+  border-radius: var(--radius-large);
   background-color: var(--bg-card-hover);
-  transition: 0.2s;
 }
 .single-wide-card-link-text {
   margin: auto;
@@ -667,7 +670,6 @@ nav {
   text-align: left !important;
   margin-left: 0 !important;
 }
-
 
 .single-wide-card-notice {
   border: var(--spacing) solid var(--notice);
@@ -754,10 +756,14 @@ nav {
   text-decoration: none;
   color: var(--text-card);
   min-height: 50px;
+  transition: 0.3s ease-in-out;
 }
 .supergrid-card-link:hover {
+  border-radius: var(--radius-large) !important;
   background-color: var(--bg-card-hover);
-  transition: 0.2s;
+}
+.supergrid-card-link:hover .supergrid-card-img img {
+  border-radius: var(--radius-large);
 }
 .supergrid-card-link-title-image {
   padding: var(--spacing);
@@ -776,6 +782,7 @@ nav {
   float: right;
   margin-top: auto;
   margin-bottom: auto;
+  transition: 0.3s ease-in-out;
 }
 .supergrid-card-img {
   padding: var(--spacing-small);
@@ -823,7 +830,7 @@ nav {
   width: 100%;
   height: 100%;
   display: block;
-  transition: 0.2s ease-out;
+  transition: 0.3s ease-out;
 }
 .chevron-rotate-image.chevron-active {
   transform: rotate(90deg);
@@ -848,7 +855,7 @@ nav {
   margin: auto;
   display: flex;
   border-radius: var(--radius);
-  transition: 0.2s ease-out;
+  transition: 0.3s ease-out;
 }
 .expanding-card-single-title:hover {
   background-color: var(--bg-card-hover);
@@ -862,12 +869,12 @@ nav {
   border-radius: var(--radius) var(--radius);
   display: grid;
   grid-template-rows: 0fr;
-  transition: 0.2s ease-out;
+  transition: 0.3s ease-out;
 }
 .expanding-card-single-content.is-open {
   grid-template-rows: 1fr;
   border-radius: 0 0 var(--radius) var(--radius);
-  transition: 0.2s ease-out;
+  transition: 0.3s ease-out;
 }
 .expanding-card-content-wrapper {
   overflow: hidden; 
@@ -956,7 +963,7 @@ nav {
     z-index: 1000;
     background-color: var(--bg-nav-mobile);
     backdrop-filter: blur(var(--blur));
-    transition: 1s;
+    transition: 1s ease-in-out;
   }
   
   .nav-link-mobile {
@@ -970,7 +977,7 @@ nav {
     text-align: center;
     color: var(--text-body);
     text-decoration: none;
-    transition: 0.3s;
+    transition: 0.3s ease-in-out;
   }  
   .nav-link-mobile:hover {
     background-color: var(--bg-button-hover);
