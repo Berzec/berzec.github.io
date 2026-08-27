@@ -66,10 +66,10 @@
   /* background colors */
 
   --bg-main: rgba(20, 20, 20, 1);
-  --bg-main-clear: rgba(26, 26, 26, 0.5);
+  --bg-main-clear: rgba(20, 20, 20, 0.6);
 
-  --bg-card: rgba(45, 45, 50, 1);
-  --bg-card-hover: rgba(100, 103, 105, 1);
+  --bg-card: rgba(40, 43, 45, 1);
+  --bg-card-hover: rgba(90, 93, 95, 1);
   
   --bg-nav: rgba(70, 70, 70, 0.9);
   --bg-nav-hover: rgba(150, 150, 150, 0.6);
@@ -124,7 +124,7 @@
   /* background colors */
 
   --bg-main: rgba(240, 243, 245, 1);
-  --bg-main-clear: rgba(220, 220, 220, 0.1);
+  --bg-main-clear: rgba(240, 243, 245, 0.1);
 
   --bg-card: rgba(220, 223, 225, 1);
   --bg-card-hover: rgba(180, 183, 185, 1);
