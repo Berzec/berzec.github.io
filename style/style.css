@@ -69,8 +69,8 @@
   --bg-main: rgba(20, 20, 20, 1);
   --bg-main-clear: rgba(20, 20, 20, 0.6);
 
-  --bg-card: rgba(43, 40, 45, 1);
-  --bg-card-hover: rgba(93, 90, 95, 1);
+  --bg-card: rgba(41, 40, 42, 1);
+  --bg-card-hover: rgba(91, 90, 92, 1);
   
   --bg-nav: rgba(70, 70, 70, 0.9);
   --bg-nav-hover: rgba(150, 150, 150, 0.6);
@@ -91,8 +91,8 @@
   --button-close-hover: rgba(250, 60, 60, 1);
 
   --slideshow-dot: rgba(50, 50, 50, 1);
-  --slideshow-dot-hover: rgba(173, 170, 175, 0.75);
-  --slideshow-dot-selected: rgba(233, 230, 235, 1);
+  --slideshow-dot-hover: rgba(171, 170, 172, 0.75);
+  --slideshow-dot-selected: rgba(231, 230, 232, 1);
 
   /* other colors */
 
