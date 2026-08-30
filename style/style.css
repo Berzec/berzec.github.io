@@ -20,7 +20,7 @@
   --radius-xs: 10px;
   --radius-large: 50px;
   --radius-xl: 75px;
-  --radius-circle: 10000px;
+  --radius-circle: 50vh;
 
   /* spacing and sizing */
 
@@ -29,11 +29,11 @@
   --spacing-large: 15px;
   --spacing-xl: 25px;
 
-  --card-max-width: 1000px;
-  --card-max-width-xs: 600px;
-  --card-max-width-small: 800px;
+  --card-max-width: 1200px;
+  --card-max-width-xs: 800px;
+  --card-max-width-small: 1000px;
   --card-max-width-large: 1500px;
-  --card-max-width-xl: 2000px;
+  --card-max-width-xl: 1800px;
 
   --card-height: 70px;
 
@@ -43,6 +43,7 @@
 
   --blur: 15px;
   --blur-light: 7px;
+  --blur-button: 2px;
 
   /* clear */
   --clear: rgba(0, 0, 0, 0);
@@ -68,8 +69,8 @@
   --bg-main: rgba(20, 20, 20, 1);
   --bg-main-clear: rgba(20, 20, 20, 0.6);
 
-  --bg-card: rgba(40, 43, 45, 1);
-  --bg-card-hover: rgba(90, 93, 95, 1);
+  --bg-card: rgba(45, 43, 45, 1);
+  --bg-card-hover: rgba(95, 93, 95, 1);
   
   --bg-nav: rgba(70, 70, 70, 0.9);
   --bg-nav-hover: rgba(150, 150, 150, 0.6);
@@ -90,8 +91,8 @@
   --button-close-hover: rgba(250, 60, 60, 1);
 
   --slideshow-dot: rgba(50, 50, 50, 1);
-  --slideshow-dot-hover: rgba(170, 173, 175, 0.75);
-  --slideshow-dot-selected: rgba(230, 233, 235, 1);
+  --slideshow-dot-hover: rgba(175, 173, 175, 0.75);
+  --slideshow-dot-selected: rgba(235, 233, 235, 1);
 
   /* other colors */
 
@@ -123,11 +124,11 @@
 
   /* background colors */
 
-  --bg-main: rgba(240, 243, 245, 1);
-  --bg-main-clear: rgba(240, 243, 245, 0.1);
+  --bg-main: rgba(245, 243, 245, 1);
+  --bg-main-clear: rgba(245, 243, 245, 0.1);
 
-  --bg-card: rgba(220, 223, 225, 1);
-  --bg-card-hover: rgba(180, 183, 185, 1);
+  --bg-card: rgba(215, 213, 215, 1);
+  --bg-card-hover: rgba(175, 173, 175, 1);
   
   --bg-nav: rgba(210, 210, 210, 0.9);
   --bg-nav-hover: rgba(160, 160, 160, 0.6);
@@ -148,8 +149,8 @@
   --button-close-hover: rgba(250, 60, 60, 1);
 
   --slideshow-dot: rgba(200, 200, 200, 1);
-  --slideshow-dot-hover: rgba(110, 113, 115, 0.8);
-  --slideshow-dot-selected: rgba(50, 53, 55, 1);
+  --slideshow-dot-hover: rgba(115, 113, 115, 0.8);
+  --slideshow-dot-selected: rgba(55, 53, 55, 1);
 
   /* other colors */
 
@@ -328,9 +329,12 @@ nav {
 }
 .theme-toggle {
   position: absolute;
+  cursor: pointer;
   right: 0;
   margin: var(--spacing-large) var(--spacing-large) 0 0;
+  transition: 0.2s ease-in-out;
 }
+
 .lighticon {
   display: none;
   height: 25px;
@@ -343,7 +347,6 @@ nav {
   width: 25px;
   margin: auto;
 }
-
 
 /* LEGISLATION STATUS CIRCLES */
 .pass-circle, .fail-circle, .tabled-circle, .veto-circle, .na-circle, .clear-circle {
@@ -463,10 +466,19 @@ nav {
   width: 95%;
 }
 .slideshow-images {
-  margin: auto;
-  align-items: center;
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  visibility: hidden;
   height: 35dvw;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+.slideshow-images.active {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
 }
 .slideshow-images img {
   height: inherit;
@@ -478,18 +490,16 @@ nav {
   cursor: pointer;
   position: absolute;
   top: 50%;
-  width: auto;
   margin-top: -22px;
   margin-right: var(--spacing-small);
   margin-left: var(--spacing-small);
-  border-radius: var(--radius-circle);
+  border-radius: var(--radius);
   padding: var(--spacing-large);
   color: var(--text-body);
   background-color: var(--bg-nav-mobile);
-  opacity: 1;
-  font-weight: bold;
-  font-size: 1.5em;
-  transition: 0.3s ease;
+  backdrop-filter: blur(var(--blur-button));
+  font-size: 1.6em;
+  transition: 0.2s ease-in-out;
   user-select: none;
 }
 .slideshow-forward {
@@ -497,6 +507,7 @@ nav {
 }
 .slideshow-backward:hover, .slideshow-forward:hover {
   background-color: var(--bg-button);
+  border-radius: var(--radius-small);
 }
 .slideshow-caption-text {
   color: var(--text-body);
@@ -747,6 +758,13 @@ nav {
   padding: unset;
   padding-bottom: var(--spacing);
 }
+/* h1, but without padding (h1 is meant to be used with p) */
+.supergrid-card-title h2 {
+  font-size: 1.2em;
+  margin: auto;
+  padding: var(--spacing) 0 var(--spacing) 0;
+}
+
 /* this should be in <a>, not <div>, use only <a> for supergrid-card-link */
 .supergrid-card-link {
   display: flex;
@@ -788,6 +806,8 @@ nav {
   padding: var(--spacing-small);
   height: 150px;
   border-radius: var(--radius);
+  margin-top: auto;
+  margin-bottom: auto;
 }
 .supergrid-card-img img {
   height: 100%;

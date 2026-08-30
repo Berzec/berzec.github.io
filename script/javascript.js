@@ -54,7 +54,6 @@ function applyStoredTheme() {
 // Run immediately on script load
 applyStoredTheme();
 
-
 // open menu
 function settingToggle() {
   let x = document.getElementById("setting-card");
@@ -66,7 +65,6 @@ function settingToggle() {
     x.style.display = "flex";
   }
 }
-
 
 // close the menu for mobile
 function menuCloseToggle() {
@@ -80,7 +78,6 @@ function menuCloseToggle() {
   }
 }
 
-
 window.onclick = function(e) {
   let x = document.getElementById("setting-card");
 
@@ -89,15 +86,12 @@ window.onclick = function(e) {
   }
 }
 
-
-
 window.addEventListener("keydown", function (event) {
   let x = document.getElementById("setting-card");
   if (event.key === "Escape") {
     x.style.display = "none";
   }
 })
-
 
 // expanding cards script (collapsibles)
 var coll = document.getElementsByClassName("expanding-card-single-title");
@@ -139,14 +133,13 @@ titles.forEach((title) => {
   });
 });
 
-
-
 // slideshow script (original code swiped from w3schools, but error if no slideshow on page, so gemini fixed it, this is ai code)
-let slideIndex = 1;
+// slideshow script
+let slideIndex = 0;
 
-// Only initialize if slides exist on the page
 if (document.getElementsByClassName("slideshow-images").length > 0) {
   showSlides(slideIndex);
+  autoSlides();
 }
 
 function plusSlides(n) {
@@ -158,27 +151,34 @@ function currentSlide(n) {
 }
 
 function showSlides(n) {
-  let i;
   let slides = document.getElementsByClassName("slideshow-images");
   let dots = document.getElementsByClassName("slideshow-dot");
 
-  // Guard clause: stop if no slides are found on the current page
   if (slides.length === 0) return;
 
   if (n > slides.length) { slideIndex = 1; }
   if (n < 1) { slideIndex = slides.length; }
 
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  // Remove active class from all slides and dots
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].classList.remove("active");
   }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" slideshow-dot-active", "");
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("slideshow-dot-active");
   }
 
-  slides[slideIndex - 1].style.display = "block";
-
-  // Safely set active class only if dots exist
+  // Activate current slide and dot
+  slides[slideIndex - 1].classList.add("active");
   if (dots.length > 0 && dots[slideIndex - 1]) {
-    dots[slideIndex - 1].className += " slideshow-dot-active";
+    dots[slideIndex - 1].classList.add("slideshow-dot-active");
   }
+}
+
+function autoSlides() {
+  let slides = document.getElementsByClassName("slideshow-images");
+  if (slides.length === 0) return;
+
+  slideIndex++;
+  showSlides(slideIndex);
+  setTimeout(autoSlides, 8000);
 }
