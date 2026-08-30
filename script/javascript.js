@@ -180,5 +180,5 @@ function autoSlides() {
 
   slideIndex++;
   showSlides(slideIndex);
-  setTimeout(autoSlides, 8000);
+  setTimeout(autoSlides, 7000);
 }

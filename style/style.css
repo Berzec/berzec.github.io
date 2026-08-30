@@ -69,8 +69,8 @@
   --bg-main: rgba(20, 20, 20, 1);
   --bg-main-clear: rgba(20, 20, 20, 0.6);
 
-  --bg-card: rgba(45, 43, 45, 1);
-  --bg-card-hover: rgba(95, 93, 95, 1);
+  --bg-card: rgba(43, 40, 45, 1);
+  --bg-card-hover: rgba(93, 90, 95, 1);
   
   --bg-nav: rgba(70, 70, 70, 0.9);
   --bg-nav-hover: rgba(150, 150, 150, 0.6);
@@ -91,8 +91,8 @@
   --button-close-hover: rgba(250, 60, 60, 1);
 
   --slideshow-dot: rgba(50, 50, 50, 1);
-  --slideshow-dot-hover: rgba(175, 173, 175, 0.75);
-  --slideshow-dot-selected: rgba(235, 233, 235, 1);
+  --slideshow-dot-hover: rgba(173, 170, 175, 0.75);
+  --slideshow-dot-selected: rgba(233, 230, 235, 1);
 
   /* other colors */
 
@@ -124,18 +124,18 @@
 
   /* background colors */
 
-  --bg-main: rgba(245, 243, 245, 1);
-  --bg-main-clear: rgba(245, 243, 245, 0.1);
+  --bg-main: rgba(243, 240, 245, 1);
+  --bg-main-clear: rgba(243, 240, 245, 0.1);
 
-  --bg-card: rgba(215, 213, 215, 1);
-  --bg-card-hover: rgba(175, 173, 175, 1);
+  --bg-card: rgba(213, 210, 215, 1);
+  --bg-card-hover: rgba(173, 170, 175, 1);
   
   --bg-nav: rgba(210, 210, 210, 0.9);
   --bg-nav-hover: rgba(160, 160, 160, 0.6);
   --bg-nav-selected: rgba(130, 130, 130, 0.5);
   --bg-nav-mobile: rgba(220, 220, 220, 0.7);
 
-  --bg-footer: rgba(190,190,190,1);
+  --bg-footer: rgba(190, 190, 190, 1);
 
   --bg-button: rgba(180, 180, 180, 1);
 
@@ -149,8 +149,8 @@
   --button-close-hover: rgba(250, 60, 60, 1);
 
   --slideshow-dot: rgba(200, 200, 200, 1);
-  --slideshow-dot-hover: rgba(115, 113, 115, 0.8);
-  --slideshow-dot-selected: rgba(55, 53, 55, 1);
+  --slideshow-dot-hover: rgba(113, 110, 115, 0.8);
+  --slideshow-dot-selected: rgba(53, 50, 55, 1);
 
   /* other colors */
 
@@ -525,6 +525,7 @@ nav {
   gap: var(--spacing);
   padding: var(--spacing);  
   margin: auto;
+  margin-bottom: var(--spacing-large) !important;
 }
 .slideshow-dot {
   display: flex;
@@ -727,10 +728,9 @@ nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
   gap: var(--spacing-large);
-  padding: var(--spacing);
+  margin: var(--spacing) auto var(--spacing) auto;
   width: 90dvw;
   max-width: var(--card-max-width);
-  margin: auto;
 }
 .supergrid-card {
   display: flex;
