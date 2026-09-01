@@ -682,6 +682,13 @@ nav {
   text-align: left !important;
   margin-left: 0 !important;
 }
+.single-wide-card.news a {
+  font-size: 1.3em;
+  color: var(--text-link);
+  text-align: left !important;
+  margin-left: 0 !important;
+  padding: var(--spacing);
+}
 
 .single-wide-card-notice {
   border: var(--spacing) solid var(--notice);
