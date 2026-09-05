@@ -678,6 +678,11 @@ nav {
 .single-wide-card.news {
   border-radius: var(--radius-small);
 }
+.single-wide-card.news h1 {
+  text-align: left !important;
+  margin-left: 0 !important;
+  font-size: 1.8em;
+}
 .single-wide-card.news p{
   text-align: left !important;
   margin-left: 0 !important;
@@ -688,6 +693,17 @@ nav {
   text-align: left !important;
   margin-left: 0 !important;
   padding: var(--spacing);
+}
+.single-wide-card.news img {
+  max-width: 400px;
+  max-height: 500px;
+  object-fit: contain;
+  margin: auto;
+}
+.single-wide-card.news:has(img) {
+  background-color: unset;
+  width: fit-content;
+  border-radius: var(--radius-small);
 }
 
 .single-wide-card-notice {
@@ -833,7 +849,7 @@ nav {
   text-align: unset;
 }
 .news-list {
-  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)) !important;
+  grid-template-columns: repeat(auto-fit, minmax(min(425px, 100%), 1fr)) !important;
   max-width: var(--card-max-width-xl);
   gap: var(--spacing) !important;
 }
