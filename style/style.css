@@ -127,8 +127,8 @@
   --bg-main: rgba(243, 240, 245, 1);
   --bg-main-clear: rgba(243, 240, 245, 0.1);
 
-  --bg-card: rgba(213, 210, 215, 1);
-  --bg-card-hover: rgba(173, 170, 175, 1);
+  --bg-card: rgba(223, 220, 225, 1);
+  --bg-card-hover: rgba(193, 190, 195, 1);
   
   --bg-nav: rgba(210, 210, 210, 0.9);
   --bg-nav-hover: rgba(160, 160, 160, 0.6);
@@ -589,6 +589,9 @@ nav {
   max-height: 500px;
   object-fit: cover;
 }
+.single-wide-card a {
+  color: var(--text-link);
+}
 .single-wide-card-header {
   color: var(--text-card);
   font-size: 1.2em;
@@ -751,7 +754,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
   gap: var(--spacing-large);
-  margin: var(--spacing) auto var(--spacing) auto;
+  margin: var(--spacing-large) auto var(--spacing-large) auto;
   width: 90dvw;
   max-width: var(--card-max-width);
 }
@@ -856,6 +859,24 @@ nav {
 .news-list .supergrid-card-link .supergrid-card-img {
   margin: auto 0 auto auto !important;
 }
+
+/* supergrid, but this one is flexible (ie. no rigid grids, grids are just a figment of the imagination) */
+.supergrid-container-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-large);
+  margin: var(--spacing-large) auto var(--spacing-large) auto;
+  width: 90dvw;
+  max-width: var(--card-max-width);
+}
+.supergrid-card-flex .supergrid-card, .supergrid-container-flex .supergrid-card-link {
+  flex: 1 1 300px !important;
+}
+
+
+
+
+
 
 
 .legislative-tracker {
