@@ -958,15 +958,23 @@ a {
 
 /* NEWS CONTAINERS */
 .news-list {
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   max-width: var(--card-max-width-xl);
   gap: var(--spacing-large) !important;
   justify-content: center;
 }
 
+.news-list>* {
+  max-width: 450px;
+  width: 100%;
+}
+
 .news-list .supergrid-card-link {
   display: inline-block;
   padding: 0;
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .news-list .supergrid-card-link .supergrid-card-img {
@@ -1003,9 +1011,6 @@ a {
 .supergrid-container-flex .supergrid-card-link {
   flex: 1 1 300px !important;
 }
-
-
-
 
 
 
