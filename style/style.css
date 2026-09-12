@@ -18,8 +18,8 @@
   --radius: 25px;
   --radius-small: 15px;
   --radius-xs: 10px;
-  --radius-large: 50px;
-  --radius-xl: 75px;
+  --radius-large: 45px;
+  --radius-xl: 70px;
   --radius-circle: 50vh;
 
   /* spacing and sizing */
@@ -50,10 +50,13 @@
 
 }
 
-:root /* dark theme root */ {
+:root
+
+/* dark theme root */
+  {
 
   --blue-original: rgba(100, 150, 250, 1);
-  
+
   /* colors */
 
   --text-body: rgba(225, 225, 225, 1);
@@ -62,7 +65,7 @@
 
   --text-link: rgba(100, 150, 255, 1);
 
-  --text-button: rgba(200, 200, 215, 1); 
+  --text-button: rgba(200, 200, 215, 1);
 
   /* background colors */
 
@@ -71,13 +74,13 @@
 
   --bg-card: rgba(41, 40, 42, 1);
   --bg-card-hover: rgba(91, 90, 92, 1);
-  
+
   --bg-nav: rgba(70, 70, 70, 0.9);
   --bg-nav-hover: rgba(150, 150, 150, 0.6);
   --bg-nav-selected: rgba(120, 120, 120, 0.5);
   --bg-nav-mobile: rgba(50, 50, 50, 0.8);
 
-  --bg-footer: rgba(5,5,5,1);
+  --bg-footer: rgba(5, 5, 5, 1);
 
   --bg-button: rgba(100, 100, 100, 1);
 
@@ -111,7 +114,7 @@
 
 .light-theme {
   --blue-original: rgba(100, 150, 250, 1);
-  
+
   /* colors */
 
   --text-body: rgba(25, 25, 25, 1);
@@ -120,7 +123,7 @@
 
   --text-link: rgba(30, 100, 255, 0.9);
 
-  --text-button: rgba(200, 200, 215, 1); 
+  --text-button: rgba(200, 200, 215, 1);
 
   /* background colors */
 
@@ -129,7 +132,7 @@
 
   --bg-card: rgba(223, 220, 225, 1);
   --bg-card-hover: rgba(193, 190, 195, 1);
-  
+
   --bg-nav: rgba(210, 210, 210, 0.9);
   --bg-nav-hover: rgba(160, 160, 160, 0.6);
   --bg-nav-selected: rgba(130, 130, 130, 0.5);
@@ -180,9 +183,11 @@ body {
   z-index: 1;
   transition: 0.3s ease;
 }
+
 main {
   min-height: calc(100dvh - 225px);
 }
+
 nav {
   position: relative;
   z-index: 10000;
@@ -203,6 +208,7 @@ nav {
   backdrop-filter: blur(var(--blur-light));
   background-image: linear-gradient(var(--bg-main), var(--clear));
 }
+
 .center-nav {
   border-radius: var(--radius-circle);
   background-color: var(--bg-nav);
@@ -212,9 +218,10 @@ nav {
   text-align: center;
   margin: auto;
   padding: var(--spacing-small);
-  opacity: 0.9; 
+  opacity: 0.9;
   z-index: 1000;
 }
+
 .center-nav-mobile {
   display: none;
 }
@@ -234,10 +241,12 @@ nav {
   text-decoration: none;
   transition: 0.4s;
 }
+
 .nav-link-selected {
   background-color: var(--bg-nav-selected);
   border-radius: var(--radius);
 }
+
 .nav-link:hover {
   background-color: var(--bg-nav-hover);
   border-radius: var(--radius-circle);
@@ -267,6 +276,7 @@ nav {
   margin-top: var(--spacing-large);
   grid-template-columns: 1fr 1fr 1fr;
 }
+
 .footer-card {
   position: relative;
   display: flex;
@@ -280,17 +290,22 @@ nav {
   color: var(--text-body);
   text-decoration: none;
 }
+
 .footer-card h1 {
   font-size: 1.5em;
 }
-.footer-card p, a {
+
+.footer-card p,
+a {
   font-size: 1em;
   margin: unset;
   padding: unset;
 }
+
 .footer-card a {
   color: var(--text-link);
 }
+
 .footer-card img {
   object-fit: cover;
   width: 100%;
@@ -309,14 +324,18 @@ nav {
   background-color: var(--bg-button);
   color: var(--text-button);
 }
+
 .button-circular:hover {
   background-color: var(--bg-button-hover);
   border-radius: var(--radius-circle);
 }
+
 .info {
   position: relative;
 }
-.info, .info-hover {
+
+.info,
+.info-hover {
   background-color: var(--bg-button);
   color: var(--text-body);
   border-radius: var(--radius);
@@ -324,9 +343,11 @@ nav {
   display: none;
   padding: var(--spacing);
 }
+
 .info-hover:hover {
   display: block;
 }
+
 .theme-toggle {
   position: absolute;
   cursor: pointer;
@@ -341,6 +362,7 @@ nav {
   width: 25px;
   margin: auto;
 }
+
 .darkicon {
   display: block;
   height: 25px;
@@ -349,7 +371,12 @@ nav {
 }
 
 /* LEGISLATION STATUS CIRCLES */
-.pass-circle, .fail-circle, .tabled-circle, .veto-circle, .na-circle, .clear-circle {
+.pass-circle,
+.fail-circle,
+.tabled-circle,
+.veto-circle,
+.na-circle,
+.clear-circle {
   border-radius: var(--radius-circle);
   min-height: 20px;
   min-width: 10px;
@@ -357,21 +384,27 @@ nav {
   position: relative;
   margin-left: var(--spacing-small);
 }
+
 .pass-circle {
   background-color: var(--pass);
 }
+
 .fail-circle {
   background-color: var(--fail);
 }
+
 .tabled-circle {
   background-color: var(--tabled);
 }
+
 .veto-circle {
   background-color: var(--veto);
 }
+
 .na-circle {
   background-color: var(--na);
 }
+
 .clear-circle {
   background-color: none;
 }
@@ -392,9 +425,11 @@ nav {
   border-radius: var(--radius-circle);
   z-index: 1000000;
 }
+
 .setting-toggler:hover {
   background-color: var(--bg-button-hover);
 }
+
 /* setting card js-linked */
 #setting-card {
   display: none;
@@ -426,6 +461,7 @@ nav {
   opacity: 0;
   z-index: 50;
 }
+
 /* the first, first card (top of the page, under nav, big banner) */
 #first-card {
   position: relative;
@@ -436,23 +472,28 @@ nav {
   z-index: 3;
   overflow: auto;
 }
+
 /* first card, but image. if image, it should only be one image, and only the image. no words */
 #first-card img {
   width: 100%;
 }
+
 #first-card h1 {
   font-size: 3em;
   padding: 0 var(--spacing) 0 var(--spacing);
 }
+
 #first-card p {
   font-size: 1.2em;
   padding: 0 var(--spacing) 0 var(--spacing);
 }
+
 /* 404 error page */
 #fof {
   width: 75%;
   max-width: var(--card-max-width-xs);
 }
+
 /* br, but card-sized */
 .blank-card {
   height: 7dvw;
@@ -465,6 +506,7 @@ nav {
   margin: auto;
   width: 95%;
 }
+
 .slideshow-images {
   position: absolute;
   top: 0;
@@ -475,18 +517,22 @@ nav {
   height: 35dvw;
   transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
 }
+
 .slideshow-images.active {
   opacity: 1;
   visibility: visible;
   position: relative;
 }
+
 .slideshow-images img {
   height: inherit;
   width: 100%;
   object-fit: cover;
   border-radius: var(--radius);
 }
-.slideshow-forward, .slideshow-backward {
+
+.slideshow-forward,
+.slideshow-backward {
   cursor: pointer;
   position: absolute;
   top: 50%;
@@ -502,13 +548,17 @@ nav {
   transition: 0.2s ease-in-out;
   user-select: none;
 }
+
 .slideshow-forward {
   right: 0;
 }
-.slideshow-backward:hover, .slideshow-forward:hover {
+
+.slideshow-backward:hover,
+.slideshow-forward:hover {
   background-color: var(--bg-button);
   border-radius: var(--radius-small);
 }
+
 .slideshow-caption-text {
   color: var(--text-body);
   font-size: 1em;
@@ -518,15 +568,17 @@ nav {
   background-color: var(--bg-main);
   margin: auto;
 }
+
 .slideshow-dot-container {
   display: grid;
   width: 75%;
   grid-template-columns: repeat(auto-fit, minmax(min(20px, 100%), 1fr));
   gap: var(--spacing);
-  padding: var(--spacing);  
+  padding: var(--spacing);
   margin: auto;
   margin-bottom: var(--spacing-large) !important;
 }
+
 .slideshow-dot {
   display: flex;
   cursor: pointer;
@@ -536,19 +588,28 @@ nav {
   display: inline-block;
   transition: background-color 0.3s ease;
 }
+
 .slideshow-dot:hover {
   background-color: var(--slideshow-dot-hover);
 }
+
 .slideshow-dot-active {
   background-color: var(--slideshow-dot-selected);
 }
+
 .slideshow-fade {
   animation-name: fade;
   animation-duration: 1.5s;
 }
+
 @keyframes slideshow-fade {
-  from {opacity: .4}
-  to {opacity: 1}
+  from {
+    opacity: .4
+  }
+
+  to {
+    opacity: 1
+  }
 }
 
 
@@ -562,6 +623,7 @@ nav {
   border-radius: var(--radius);
   margin: var(--spacing-large) auto var(--spacing-large) auto;
 }
+
 .single-wide-card h1 {
   font-size: 2.2em;
   color: var(--text-card);
@@ -569,6 +631,7 @@ nav {
   margin: auto;
   padding: var(--spacing);
 }
+
 .single-wide-card h2 {
   font-size: 2em;
   color: var(--text-card);
@@ -576,6 +639,7 @@ nav {
   margin: auto;
   padding: var(--spacing);
 }
+
 .single-wide-card p {
   font-size: 1.3em;
   color: var(--text-card);
@@ -583,24 +647,29 @@ nav {
   margin: auto;
   padding: var(--spacing);
 }
+
 .single-wide-card img {
   width: 100%;
   border-radius: inherit;
   max-height: 500px;
   object-fit: cover;
 }
+
 .single-wide-card a {
   color: var(--text-link);
 }
+
 .single-wide-card-header {
   color: var(--text-card);
   font-size: 1.2em;
   background-color: var(--bg-main);
 }
+
 .single-wide-card-title {
   padding: var(--spacing);
 }
-.single-wide-card-link{
+
+.single-wide-card-link {
   display: flex;
   background-color: var(--bg-card);
   border-radius: var(--radius);
@@ -611,33 +680,39 @@ nav {
   max-width: var(--card-max-width);
   transition: 0.3s ease-in-out;
 }
+
 .single-wide-card-link:hover {
   border-radius: var(--radius-large);
   background-color: var(--bg-card-hover);
 }
+
 .single-wide-card-link-text {
   margin: auto;
   text-align: center;
 }
+
 .single-wide-card-link-text-wrapper {
   margin: auto;
   margin-left: var(--spacing-xl);
   text-align: left;
 }
-.single-wide-card-link-text-wrapper h1{
+
+.single-wide-card-link-text-wrapper h1 {
   font-size: 2em;
   width: 100%;
   margin-top: auto;
   margin-bottom: auto;
   padding: var(--spacing) 0 var(--spacing) 0;
 }
-.single-wide-card-link-text-wrapper p{
+
+.single-wide-card-link-text-wrapper p {
   font-size: 1.25em;
   width: 100%;
   margin-top: auto;
   margin-bottom: auto;
   padding: var(--spacing) 0 var(--spacing) 0;
 }
+
 .single-wide-card-link img {
   display: flex;
   margin-right: 0 !important;
@@ -646,6 +721,7 @@ nav {
   border-radius: var(--radius);
   padding: var(--spacing)
 }
+
 .single-wide-card-link-download {
   margin-top: auto;
   margin-bottom: auto;
@@ -653,6 +729,7 @@ nav {
   height: 40px !important;
   width: 40px !important;
 }
+
 .single-wide-card-text-and-image {
   width: 90dvw;
   max-width: var(--card-max-width);
@@ -662,6 +739,7 @@ nav {
   color: var(--text-card);
   display: flex;
 }
+
 .single-wide-card-text-and-image h1 {
   font-size: 1.6em;
   padding: var(--spacing);
@@ -674,22 +752,27 @@ nav {
   height: 200px;
   border-radius: var(--radius);
 }
+
 .single-wide-card-text-and-image .news img {
   max-height: 350px;
   height: 15dvh;
 }
+
 .single-wide-card.news {
   border-radius: var(--radius-small);
 }
+
 .single-wide-card.news h1 {
   text-align: left !important;
   margin-left: 0 !important;
   font-size: 1.8em;
 }
-.single-wide-card.news p{
+
+.single-wide-card.news p {
   text-align: left !important;
   margin-left: 0 !important;
 }
+
 .single-wide-card.news a {
   font-size: 1.3em;
   color: var(--text-link);
@@ -697,12 +780,14 @@ nav {
   margin-left: 0 !important;
   padding: var(--spacing);
 }
+
 .single-wide-card.news img {
   max-width: 400px;
   max-height: 500px;
   object-fit: contain;
   margin: auto;
 }
+
 .single-wide-card.news:has(img) {
   background-color: unset;
   width: fit-content;
@@ -722,6 +807,7 @@ nav {
   max-width: var(--card-max-width);
   margin: var(--spacing) var(--spacing) var(--spacing) var(--spacing);
 }
+
 .duo-single-card {
   position: relative;
   display: flex;
@@ -733,16 +819,19 @@ nav {
   padding: var(--spacing);
   margin: var(--spacing) auto var(--spacing) auto;
 }
+
 .duo-single-card-title {
   font-size: 1.6em;
   padding: var(--spacing);
 }
+
 .duo-single-card-download {
   margin: auto;
   margin-right: var(--spacing-small) !important;
   padding: var(--spacing-small);
   float: right !important;
 }
+
 .duo-single-card-download img {
   height: 40px;
   margin-right: auto !important;
@@ -758,12 +847,14 @@ nav {
   width: 90dvw;
   max-width: var(--card-max-width);
 }
+
 .supergrid-card {
   display: flex;
   background-color: var(--bg-card);
   border-radius: var(--radius);
   min-height: 50px;
 }
+
 .supergrid-card-title {
   font-size: 1.6em;
   padding: var(--spacing);
@@ -772,18 +863,21 @@ nav {
   margin: auto;
   text-align: center;
 }
+
 .supergrid-card-title h1 {
   font-size: 1em;
   margin: auto;
   padding: unset;
   padding-top: var(--spacing);
 }
+
 .supergrid-card-title p {
   font-size: 0.65em !important;
   margin: auto;
   padding: unset;
   padding-bottom: var(--spacing);
 }
+
 /* h1, but without padding (h1 is meant to be used with p) */
 .supergrid-card-title h2 {
   font-size: 1.2em;
@@ -802,32 +896,39 @@ nav {
   min-height: 50px;
   transition: 0.3s ease-in-out;
 }
+
 .supergrid-card-link:hover {
   border-radius: var(--radius-large) !important;
   background-color: var(--bg-card-hover);
 }
+
 .supergrid-card-link:hover .supergrid-card-img img {
   border-radius: var(--radius-large);
 }
+
 .supergrid-card-link-title-image {
   padding: var(--spacing);
   padding: unset;
   margin: auto;
   margin-left: var(--spacing) !important;
 }
+
 .supergrid-card-link-title-image h1 {
   font-size: 1.6em;
 }
+
 .supergrid-card-link-title-image p {
   font-size: 1.1em;
 }
+
 .supergrid-card-link img {
-  height: 40px; 
+  height: 40px;
   float: right;
   margin-top: auto;
   margin-bottom: auto;
   transition: 0.3s ease-in-out;
 }
+
 .supergrid-card-img {
   padding: var(--spacing-small);
   height: 150px;
@@ -835,6 +936,7 @@ nav {
   margin-top: auto;
   margin-bottom: auto;
 }
+
 .supergrid-card-img img {
   height: 100%;
   aspect-ratio: 1 / 1;
@@ -843,21 +945,48 @@ nav {
   float: right;
   margin-right: 0px;
 }
+
 /* no image, just a link with words */
 .supergrid-card-title-link {
   font-size: 1.6em;
   margin: auto;
 }
+
 .member .supergrid-card-title {
   text-align: unset;
 }
+
+/* NEWS CONTAINERS */
 .news-list {
-  grid-template-columns: repeat(auto-fit, minmax(min(425px, 100%), 1fr)) !important;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
   max-width: var(--card-max-width-xl);
-  gap: var(--spacing) !important;
+  gap: var(--spacing-large) !important;
+  justify-content: center;
 }
+
+.news-list .supergrid-card-link {
+  display: inline-block;
+  padding: 0;
+}
+
 .news-list .supergrid-card-link .supergrid-card-img {
-  margin: auto 0 auto auto !important;
+  display: block;
+  height: 25dvh;
+  margin: var(--spacing-small);
+  padding: 0;
+}
+
+.news-list .supergrid-card-link .supergrid-card-img img {
+  width: 100%;
+}
+
+.supergrid-container.news-list .supergrid-card-link .supergrid-card-link-title-image {
+  display: block;
+  max-height: unset;
+  margin: auto !important;
+  padding: var(--spacing-small);
+  width: 95%;
+  max-width: 400px;
 }
 
 /* supergrid, but this one is flexible (ie. no rigid grids, grids are just a figment of the imagination) */
@@ -869,10 +998,11 @@ nav {
   width: 90dvw;
   max-width: var(--card-max-width);
 }
-.supergrid-card-flex .supergrid-card, .supergrid-container-flex .supergrid-card-link {
+
+.supergrid-card-flex .supergrid-card,
+.supergrid-container-flex .supergrid-card-link {
   flex: 1 1 300px !important;
 }
-
 
 
 
@@ -890,15 +1020,18 @@ nav {
   border-radius: var(--radius);
   margin: var(--spacing-large) auto var(--spacing-large) auto;
 }
+
 .chevron-rotate-image {
   width: 100%;
   height: 100%;
   display: block;
   transition: 0.3s ease-out;
 }
+
 .chevron-rotate-image.chevron-active {
   transform: rotate(90deg);
 }
+
 .expanding-card-single-chevron {
   margin: auto 0 auto auto;
   height: 30px;
@@ -921,12 +1054,15 @@ nav {
   border-radius: var(--radius);
   transition: 0.3s ease-out;
 }
+
 .expanding-card-single-title:hover {
   background-color: var(--bg-card-hover);
 }
+
 .expanding-card-single-title-active {
   border-radius: var(--radius) var(--radius) 0 0;
 }
+
 .expanding-card-single-content {
   margin: auto;
   background-color: var(--bg-card);
@@ -935,14 +1071,17 @@ nav {
   grid-template-rows: 0fr;
   transition: 0.3s ease-out;
 }
+
 .expanding-card-single-content.is-open {
   grid-template-rows: 1fr;
   border-radius: 0 0 var(--radius) var(--radius);
   transition: 0.3s ease-out;
 }
+
 .expanding-card-content-wrapper {
-  overflow: hidden; 
+  overflow: hidden;
 }
+
 .expanding-card-single-content-link {
   padding: var(--spacing);
   color: var(--text-card);
@@ -950,12 +1089,14 @@ nav {
   display: flex;
   position: relative;
 }
+
 .expanding-card-single-content-link p {
   margin: 0;
   padding: 0;
   width: 100%;
 }
-.expanding-card-single-content-link a{
+
+.expanding-card-single-content-link a {
   color: var(--text-link);
   text-decoration: none;
   width: 200px;
@@ -983,9 +1124,11 @@ nav {
     align-items: center;
     height: 550px;
   }
+
   .footer-card {
     width: max-content;
   }
+
   .footer-card img {
     padding-top: 25px;
   }
@@ -1011,15 +1154,16 @@ nav {
     display: flex;
     position: absolute;
   }
+
   #setting-card {
-    background-color: var(--clear);    
+    background-color: var(--clear);
   }
 
   /* MOBILE SPECIFIC CLASS */
 
   .center-nav-mobile {
     display: block;
-    position:fixed;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0px;
@@ -1029,7 +1173,7 @@ nav {
     backdrop-filter: blur(var(--blur));
     transition: 1s ease-in-out;
   }
-  
+
   .nav-link-mobile {
     position: relative;
     display: grid;
@@ -1042,14 +1186,15 @@ nav {
     color: var(--text-body);
     text-decoration: none;
     transition: 0.3s ease-in-out;
-  }  
+  }
+
   .nav-link-mobile:hover {
     background-color: var(--bg-button-hover);
     border-radius: var(--radius-circle);
   }
 
   .setting-toggler {
-  display: block;
+    display: block;
   }
 
   .setting-button-mobile {
@@ -1063,6 +1208,7 @@ nav {
     border: none;
     border-radius: var(--radius-circle);
   }
+
   .global-setting-bar-toggle-mobile {
     display: block;
     position: fixed;
@@ -1072,22 +1218,27 @@ nav {
     left: 0px;
     z-index: 1000;
     transition: 1s;
-  }  
+  }
+
   #theme-toggle-mobile-id {
     display: flex;
     margin-top: var(--spacing-large);
     margin-left: var(--spacing-large);
     background-color: var(--bg-button);
   }
+
   #theme-toggle-mobile-id:hover {
     background-color: var(--bg-button-hover);
   }
+
   #theme-toggle-desktop-id {
     display: none;
   }
+
   .theme-toggle {
     left: 0 !important;
   }
+
   #nav-link-mobile-filler {
     position: relative;
     display: grid;
@@ -1099,12 +1250,14 @@ nav {
     font-size: 1.5em;
     text-align: center;
   }
+
   .menu-close-mobile-id {
     display: flex;
     background-color: var(--button-close);
-    margin-top: var(--spacing-large);    
+    margin-top: var(--spacing-large);
     margin-right: var(--spacing-large);
   }
+
   .menu-close-mobile-id:hover {
     background-color: var(--button-close-hover);
     opacity: var(--hover-opacity);
@@ -1116,6 +1269,7 @@ nav {
     flex-direction: column;
     align-items: center;
   }
+
   .footer-card {
     width: max-content;
   }
@@ -1124,24 +1278,46 @@ nav {
   .single-wide-card-text-and-image {
     display: block;
   }
+
   .single-wide-card-text-and-image h1 {
     text-align: center;
   }
+
   .single-wide-card-text-and-image img {
     display: block;
     max-height: unset;
-    margin: auto !important;
+    margin: auto;
     padding: var(--spacing-small);
     width: 95%;
     height: 95%;
     max-width: 400px;
   }
 
+  .single-wide-card-text-and-image.news img {
+    max-width: 100%;
+    max-height: 100%;
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    padding: 0 !important;
+  }
+
+
+  .single-wide-card-text-and-image.news {
+    box-sizing: border-box;
+    padding: var(--spacing);
+  }
+
   .duo-container-card {
     flex-direction: column;
   }
+
   .duo-single-card {
     width: unset;
+  }
+
+  .news-list .supergrid-card-link .supergrid-card-img {
+    height: 30dvh;
   }
 
 
